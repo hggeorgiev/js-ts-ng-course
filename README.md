@@ -1,6 +1,6 @@
-# angular-2-intro
+# In
 
-This course is intendet for quick introduction into JavaScript, TypeScript and Angular 2. It also deleivers introductory concepts on testin Angular 2 applications.
+This course is intended to make quick introduction into JavaScript, TypeScript and Angular. It also deleivers introductory concepts on testing Angularapplications.
 
 ## JavaScript
 
