@@ -1,4 +1,4 @@
-# In
+# Angular Intro
 
 This course is intended to make quick introduction into JavaScript, TypeScript and Angular. It also deleivers introductory concepts on testing Angularapplications.
 
