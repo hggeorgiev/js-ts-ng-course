@@ -19,7 +19,7 @@ export class AppComponent implements AfterContentChecked, OnDestroy {
     @ViewChild('form') form: NgForm
 
     ngAfterContentChecked() {
-        if( ! this.form.controls['value'] ) // not inited yet
+        if( ! this.form.controls['value'] ) // not initialized yet
             return
 
         if( this.sub )
