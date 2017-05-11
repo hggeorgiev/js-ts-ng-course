@@ -141,7 +141,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 
 1. Hello world (with pure JavaScript)
 
-    Examples: [hello-world](Angular2/hello-world/index.html)
+    Examples: [hello-world](https://embed.plnkr.co/?show=preview&show=app%2Fapp.component.ts)
     
 1. Hello world (with TypeScript)
 
@@ -177,7 +177,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 - Router base phone book app that uses named outlet [phone-book-router-named-outlet](Angular2/phone-book-router-named-outlet)
 - Depricated router base phone book app [phone-book-router-depricated](Angular2/phone-book-router-depricated)
 	
-## Testing - Angular 2.0
+## Testing - Angular 4
 
 1. Jasmine - Behavior-Driven JavaScript
 
@@ -203,7 +203,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 
     Examples: [protractor](Testing/protractor)
 
-## Useful link
+## Useful links
 |Ttile|Link|
 |---|---|
 |Javascript Tutorial|http://www.tutorialspoint.com/javascript/ |
