@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     
     ngOnInit() {
         this.message = Observable.create( (observer) => {
-            setTimeout( () => observer.next('Hi, I am observable message'), 2000 )   
+            setTimeout( () => observer.next('Hi, I am an observable message'), 2000 )
         })
     }
  }

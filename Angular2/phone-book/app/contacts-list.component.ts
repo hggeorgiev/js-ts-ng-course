@@ -33,7 +33,7 @@ export class ContactsListComponent implements OnInit {
     constructor(private _personService: ContactsService) {}
     
     remove(person: Contact) {
-        if(person.id==this.selected.id ) {
+        if(this.selected && person.id==this.selected.id ) {
             this.selected = null
             this.selectedChange.emit(this.selected)
         }
@@ -42,7 +42,7 @@ export class ContactsListComponent implements OnInit {
     }
     
     onSelect(person: Contact) {
-        this.selected = person
+        this.selected = person;
         this.selectedChange.emit(this.selected)
     }
     

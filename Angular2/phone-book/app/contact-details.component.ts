@@ -47,11 +47,11 @@ import {EmailValidator} from "./email-validator.directive"
 })
 export class ContactDetailsComponent implements OnChanges {
     @Input()
-    contact: Contact
+    contact: Contact;
     @Output()
-    contactChange = new EventEmitter<Contact>()
+    contactChange = new EventEmitter<Contact>();
     @Input()
-    showEdit: boolean
+    showEdit: boolean;
     
     
     constructor(private _personService: ContactsService) {}
@@ -68,15 +68,15 @@ export class ContactDetailsComponent implements OnChanges {
     onSubmit(form: NgForm) {
         if(! form.valid) return;
         
-        let dirtyContact: Contact = form.value
-        dirtyContact.id = this.contact.id
+        let dirtyContact: Contact = form.value;
+        dirtyContact.id = this.contact.id;
         
         if(this.contact.id === null)
-            this._personService.add(dirtyContact)   
+            this._personService.add(dirtyContact) ;
         else
             this._personService.update(dirtyContact);
             
-        this.contact = dirtyContact
+        this.contact = dirtyContact;
         
         this.contactChange.emit(this.contact);
          
@@ -84,7 +84,7 @@ export class ContactDetailsComponent implements OnChanges {
     }
     
     onCancel() {
-        this.showEdit = false
+        this.showEdit = false;
         
         if( this.contact.id === null ) {
             this.contact = null;

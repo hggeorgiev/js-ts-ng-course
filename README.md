@@ -4,7 +4,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 
 ## JavaScript
 
-1. Include JavaScript in an HTML
+1. Include JavaScript in an HTML document
 
     Examples: [alert-hi.html](JavaScript/alert-hi.html)
 
@@ -137,7 +137,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 - Phone book app based on namespaces in separated files [phone-book](TypeScript/phone-book)
 - Phone book app based on modules [phone-book-modules](TypeScript/phone-book-modules)
 	
-## Angular 2.0
+## Angular 
 
 1. Hello world (with pure JavaScript)
 
@@ -168,7 +168,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
     Examples: [observables-vs-promises](Angular2/observables-vs-promises/index.html), [observables](Angular2/observables)
 
 ### Demo Apps
-- Phone book app [phone-book](Angular2/phone-book)
+- Phone book app [phone-book](Angular2/d)
 - HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular2/phone-book-http)
 - Router base phone book app [phone-book-router](Angular2/phone-book-router)
 - Router base phone book app with child router outlet [phone-book-router-children](Angular2/phone-book-router-children)
@@ -177,7 +177,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 - Router base phone book app that uses named outlet [phone-book-router-named-outlet](Angular2/phone-book-router-named-outlet)
 - Depricated router base phone book app [phone-book-router-depricated](Angular2/phone-book-router-depricated)
 	
-## Testing - Angular 4
+## Testing with Angular
 
 1. Jasmine - Behavior-Driven JavaScript
 

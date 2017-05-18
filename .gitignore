@@ -80,3 +80,5 @@ TypeScript/play-ground/\.idea/
 Angular2/hello-world-ts/\.idea/
 
 .idea/
+
+.DS_Store
