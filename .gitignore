@@ -41,40 +41,41 @@ Testing/karma/src/typings/
 Angular2/phone-book-http/typings/
 Angular2/phone-book-router/typings/
 
-Angular2/play-ground/\.vscode/
+Angular2/play-ground/\.idea/
 
 Testing/play-ground/dist/
 
-JavaScript/async-load/\.vscode/
+JavaScript/async-load/\.idea/
 
-JavaScript/phone-book/\.vscode/
+JavaScript/phone-book/\.idea/
 
-TypeScript/phone-book-modules/\.vscode/
+TypeScript/phone-book-modules/\.idea/
 
 Angular2/play-ground/dist/
 
-Angular2/hello-world/\.vscode/
+Angular2/hello-world/\.idea/
 
-Angular2/emitter/\.vscode/
+Angular2/emitter/\.idea/
 
-Angular2/phone-book-http/\.vscode/
+Angular2/phone-book-http/\.idea/
 
-Angular2/phone-book-router/\.vscode/
+Angular2/phone-book-router/\.idea/
 
-Angular2/phone-book-router-named-outlet/\.vscode/
+Angular2/phone-book-router-named-outlet/\.idea/
 
-Angular2/phone-book-router-children/\.vscode/
+Angular2/phone-book-router-children/\.idea/
 
-Angular2/phone-book-router-modules-lazy/\.vscode/
+Angular2/phone-book-router-modules-lazy/\.idea/
 
-Angular2/phone-book-router-modules/\.vscode/
+Angular2/phone-book-router-modules/\.idea/
 
-Testing/play-ground/\.vscode/
+Testing/play-ground/\.idea/
 
-TypeScript/type-compatibility/\.vscode/
+TypeScript/type-compatibility/\.idea/
 
 TypeScript/play-ground/js/pracxs\.js
 
-TypeScript/play-ground/\.vscode/
+TypeScript/play-ground/\.idea/
 
-Angular2/hello-world-ts/\.vscode/
+Angular2/hello-world-ts/\.idea/
+
