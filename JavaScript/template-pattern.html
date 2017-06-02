@@ -5,7 +5,7 @@
       <title>Demo Template Pattern</title>
      
       <script type="text/javascript">
-         function Vehical() {			
+         function Vehicle() {
             this.run = function() {
 				this.prepare();
                 this.move();
@@ -22,14 +22,14 @@
 			this.move = function() {
                document.write("Drive the car <br/>");
             }
-            this.__proto__ = new Vehical();
+            this.__proto__ = new Vehicle();
          }
 		 
 		 function Yacht() {
 			this.move = function() {
                document.write("Sail the yacht <br/>");
             }
-            this.__proto__ = new Vehical();
+            this.__proto__ = new Vehicle();
          }
       </script>
      
