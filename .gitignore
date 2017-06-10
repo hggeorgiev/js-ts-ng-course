@@ -71,9 +71,9 @@ Angular2/phone-book-router-modules/\.idea/
 
 Testing/play-ground/\.idea/
 
-TypeScript/type-compatibility/\.idea/
+TypeScript/**/*.js
 
-TypeScript/play-ground/js/pracxs\.js
+TypeScript/type-compatibility/\.idea/
 
 TypeScript/play-ground/\.idea/
 

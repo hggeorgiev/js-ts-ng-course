@@ -1,18 +1,18 @@
 /* ----------------------------------------------------
 Pracxs project Stylesheet
 
-Website: http://www.pracxs.com
+Website: http://www.centroida.co
 
-Copyright (C) 2016 Pracxs Net & ITCE - All Rights Reserved
+Copyright (C) 2017 Centroida & ITCE - All Rights Reserved
 You may use, distribute and modify this code under the
 terms of the Prometheus courses license.
 
 You should have received a copy of the Prometheus courses
-license.If not, please write to: prometheus@pracxs.com
+license.If not, please write to: prometheus@centroida.com
 or to prometheus@itce.com
 ---------------------------------------------------- */
 
-.pracxs-box-shadow--2dp {
+.centroida-box-shadow--2dp {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
 }
 .box-shadow--3dp {
@@ -64,7 +64,7 @@ or to prometheus@itce.com
 	padding: 0;
 }
 
-.pracxs-header {
+.centroida-header {
 	.navbar;
 	.navbar-fixed-top;
 	.box-shadow--4dp;

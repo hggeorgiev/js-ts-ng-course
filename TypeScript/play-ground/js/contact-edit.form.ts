@@ -6,4 +6,12 @@
  * license.If not, please write to: prometheus@pracxs.com
  * or to prometheus@itce.com
  */
-//# sourceMappingURL=contact.interface.js.map
+
+interface ContactEditFormElement extends HTMLFormElement {
+	contactId: HTMLInputElement
+	firstName: HTMLInputElement
+	lastName: HTMLInputElement
+	email: HTMLInputElement
+}
+
+interface Document { editContactForm?: ContactEditFormElement }
