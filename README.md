@@ -145,36 +145,36 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
     
 1. Hello world (with TypeScript)
 
-    Examples: [hello-world-ts](Angular2/hello-world-ts)
+    Examples: [hello-world-ts](Angular4/hello-world-ts)
     
 1. Attribute, class & style bindings
 
-    Examples: [user-inputs](Angular2/user-inputs), [emitter](Angular2/emitter)
+    Examples: [user-inputs](Angular4/user-inputs), [emitter](Angular4/emitter)
     
 1. Forms
 
-    Examples: [debounce](Angular2/debounce)
+    Examples: [debounce](Angular4/debounce)
     
 1. Pipes
     
-    Examples: [pipes](Angular2/pipes), [async-pipe](Angular2/async-pipe)
+    Examples: [pipes](Angular4/pipes), [async-pipe](Angular4/async-pipe)
 
 1. Custom Attribute Directive
 
-    Examples: [attribute-directive](Angular2/attribute-directive)
+    Examples: [attribute-directive](Angular4/attribute-directive)
     
 1. HTTP Client
 
-    Examples: [observables-vs-promises](Angular2/observables-vs-promises/index.html), [observables](Angular2/observables)
+    Examples: [observables-vs-promises](Angular4/observables-vs-promises/index.html), [observables](Angular4/observables)
 
 ### Demo Apps
-- Phone book app [phone-book](Angular2/d)
-- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular2/phone-book-http)
-- Router base phone book app [phone-book-router](Angular2/phone-book-router)
-- Router base phone book app with child router outlet [phone-book-router-children](Angular2/phone-book-router-children)
-- Router base phone book app that loads sub-module immediate [phone-book-router-modules](Angular2/phone-book-router-modules)
-- Router base phone book app that loads sub-module lazy [phone-book-router-modules-lazy](Angular2/phone-book-router-modules-lazy)
-- Router base phone book app that uses named outlet [phone-book-router-named-outlet](Angular2/phone-book-router-named-outlet)
+- Phone book app [phone-book](Angular4/phone-book)
+- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular4/phone-book-http)
+- Router base phone book app [phone-book-router](Angular4/phone-book-router)
+- Router base phone book app with child router outlet [phone-book-router-children](Angular4/phone-book-router-children)
+- Router base phone book app that loads sub-module immediate [phone-book-router-modules](Angular4/phone-book-router-modules)
+- Router base phone book app that loads sub-module lazy [phone-book-router-modules-lazy](Angular4/phone-book-router-modules-lazy)
+- Router base phone book app that uses named outlet [phone-book-router-named-outlet](Angular4/phone-book-router-named-outlet)
 
 	
 ## Testing with Angular
