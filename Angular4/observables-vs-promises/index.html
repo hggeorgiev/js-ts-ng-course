@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Observables vs Promises</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.1.0/rx.all.js"></script>
+  </head>
+  <body>
+	Please look in the console window to see the results from that demo.
+	
+	
+	<script>
+	
+		var promise = new Promise(function(resolve){
+			var id = setTimeout(function(){
+				console.log('Promise timeout hit')
+				
+				resolve(42)
+			}, 2000)
+			
+			console.log('Promise started')
+		}, 10000)
+		
+		promise.then(function(x) { console.log('Promise emitted: ' + x) })
+	
+		var source = Rx.Observable.create(function(observer) {
+			var id = setTimeout(function(){
+				console.log('Observable timeout hit')
+				observer.onNext(42)
+			}, 2000)
+			
+			console.log('Observable inited')
+			
+			//return function() {
+			//	console.log('Observable disposed')
+			//	clearTimeout(id)
+			//}
+		})
+		
+		var disposable = source.forEach(function(x) { console.log('Observable emitted: ' + x) })
+		
+		//setTimeout(function(){
+		//	disposable.dispose()
+		//}, 1000)
+		
+		// source.subscribe(function(x) { console.log('Re subscubed Observable emitted: ' + x) })
+	</script>
+	
+  </body>
+</html>
