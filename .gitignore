@@ -37,13 +37,13 @@ TypeScript/phone-book/js/pracxs.js
 Angular2/play-ground/typings/
 Angular2/phone-book/typings/
 *.map
-Testing/karma/src/typings/
+Angular4-Testing/karma/src/typings/
 Angular2/phone-book-http/typings/
 Angular2/phone-book-router/typings/
 
 Angular2/play-ground/\.idea/
 
-Testing/play-ground/dist/
+Angular4-Testing/play-ground/dist/
 
 JavaScript/async-load-2/\.idea/
 
@@ -69,7 +69,7 @@ Angular2/phone-book-router-modules-lazy/\.idea/
 
 Angular2/phone-book-router-modules/\.idea/
 
-Testing/play-ground/\.idea/
+Angular4-Testing/play-ground/\.idea/
 
 TypeScript/**/*.js
 

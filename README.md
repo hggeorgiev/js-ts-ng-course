@@ -181,27 +181,31 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 
 1. Jasmine - Behavior-Driven JavaScript
 
-    Examples: [jasmine-demo](Testing/jasmine-demo)
+    Examples: [jasmine-demo](Angular4-Testing/jasmine-demo)
 
 1. Dependency injection without mocking
 
-    Examples: [di-no-mock](Testing/di-no-mock)
+    Examples: [di-no-mock](Angular4-Testing/di-no-mock)
     
 1. Dependency injection with mocking
     
-    Examples: [di-with-mock](Testing/di-with-mock)
+    Examples: [di-with-mock](Angular4-Testing/di-with-mock)
 
 1. Different testing scenarios example
 
-    Examples: [test-pack](Testing/test-pack)
+    Examples: [test-pack](Angular4-Testing/test-pack)
 
 1. Karma - The Spectacular Test Runner for Javascript
 
-    Examples: [karma](Testing/karma)
+    Examples: [karma](Angular4-Testing/karma)
 
-1. Protractor - end to end testing for Angular
+1. Protractor - End to end testing for Angular
 
-    Examples: [protractor](Testing/protractor)
+    Examples: [protractor](Angular4-Testing/protractor)
+    
+1. Gulp - Build automation
+
+    Examples: [gulp](Angular4-Gulp/)
 
 ## Useful links
 |Ttile|Link|
@@ -231,4 +235,6 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 |Karma|https://karma-runner.github.io/ |
 |Angular 2 Unit Testing recipes|https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.8x5d58123 |
 |Protractor|http://angular.github.io/protractor/ |
-|Angular 2 Go with Protractor|https://github.com/CarmenPopoviciu/angular2-go-protractor |
+|Angular 2 Go with Protractor|https://github.com/CarmenPopoviciu/angular2-go-protractor
+ Gulp | http://gulpjs.com|
+ Getting started with Gulp | https://www.tutorialspoint.com/gulp/index.htm
