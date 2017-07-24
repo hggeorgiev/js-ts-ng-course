@@ -205,7 +205,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
     
 1. Gulp - Build automation
 
-    Examples: [gulp](Angular4-Tasks/)
+    Examples: [gulp](Angular4-Automation/)
 
 ## Useful links
 |Ttile|Link|
