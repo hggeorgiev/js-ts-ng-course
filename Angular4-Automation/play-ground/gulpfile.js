@@ -25,14 +25,14 @@ gulp.task('compile:ts', function () {
         .pipe(sourcemaps.init())
         .pipe(tsc(tscConfig.compilerOptions))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/app'));
+        .pipe(gulp.dest('public/dist/'));
 });
 
 gulp.task('bundle:js', function() {
-    var builder = new sysBuilder('dist', './systemjs.config.js');
-    return builder.buildStatic('app', 'dist/app.min.js')
+    var builder = new sysBuilder('public', './systemjs.config.js');
+    return builder.buildStatic('app', 'public/dist/js/app.min.js')
         .then(function () {
-            return del(['dist/**/*', '!dist/app.min.js']);
+            return del(['public/dist/**/*', '!public/dist/js/app.min.js']);
         })
         .catch(function(err) {
             console.error('>>> [systemjs-builder] Bundling failed'.bold.green, err);
@@ -48,26 +48,27 @@ gulp.task('lint:ts', function() {
 
 
 
-gulp.task('clean:dist', function () {
-    return del('dist/');
+gulp.task('clean:public', function () {
+    return del('public/');
 });
 
 
 gulp.task('uglify:js', function() {
     return gulp
-        .src('dist/app.min.js')
+        .src('public/dist/js/app.min.js')
         .pipe(uglify())
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('public/dist/js'));
 });
 
 
 gulp.task('scripts', function(callback) {
-    runSequence(['lint:ts', 'clean:dist'], 'compile:ts', 'bundle:js', 'uglify:js', callback);
+    runSequence('lint:ts',  'compile:ts', 'bundle:js', 'uglify:js', callback);
 });
+
 
 gulp.task('copy:libs', function () {
     gulp.src(['node_modules/rxjs/**/*'])
-        .pipe(gulp.dest('dist/vendor/js/rxjs'));
+        .pipe(gulp.dest('public/lib/js/rxjs'));
 
     // concatenate non-angular2 libs, shims & systemjs-config
     gulp.src([
@@ -80,24 +81,22 @@ gulp.task('copy:libs', function () {
     ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/vendor/js'));
+        .pipe(gulp.dest('public/lib/js'));
 
     // copy source maps
     gulp.src([
         'node_modules/es6-shim/es6-shim.map',
         'node_modules/reflect-metadata/Reflect.js.map',
         'node_modules/systemjs/dist/system-polyfills.js.map'
-    ]).pipe(gulp.dest('dist/vendor/js'));
+    ]).pipe(gulp.dest('public/lib/js'))
 
     // gulp.src([
     //     'node_modules/bootstrap/dist/css/bootstrap.*'
     // ]).pipe(gulp.dest('public/lib/css'));
 
     return gulp.src(['node_modules/@angular/**/*'])
-        .pipe(gulp.dest('dist/vendor/js/@angular'));
+        .pipe(gulp.dest('public/lib/js/@angular'));
 });
-
-
 
 gulp.task('minify:css', function() {
     // concat and minify global css files
@@ -105,6 +104,6 @@ gulp.task('minify:css', function() {
         .src('css/*.css')
         .pipe(concat('global.min.css'))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('dist/css/global'));
+        .pipe(gulp.dest('public/dist/css/global'));
 
 });
