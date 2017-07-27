@@ -7,15 +7,19 @@
  * or to prometheus@itce.com
  */
 
-import { NgModule }                 from '@angular/core'
-import { BrowserModule }            from '@angular/platform-browser'
-import { AppRoutingModule }         from './app-routing.module'
-import { AppComponent }             from './app.component'
-import { FailComponent }            from "./fail/fail.component"
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { AppComponent }  from './app.component';
+import { ContactsListComponent } from './contacts-list.component';
+import { ContactDetailsComponent } from './contact-details.component';
+// import { EmailValidator } from './email-validator.directive';
+import { ContactsService } from './contact.service';
 
 @NgModule({
-  imports:      [ BrowserModule, AppRoutingModule ],
-  declarations: [ AppComponent, FailComponent ],
-  bootstrap:    [ AppComponent ]
+  imports:      [ BrowserModule, FormsModule ],
+  declarations: [ AppComponent, ContactsListComponent, ContactDetailsComponent ],
+  bootstrap:    [ AppComponent ],
+  providers:    [ ContactsService ]
 })
 export class AppModule {}
