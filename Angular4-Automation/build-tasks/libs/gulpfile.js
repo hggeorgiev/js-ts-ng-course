@@ -5,7 +5,7 @@ const uglify = require('gulp-uglify');
 
 gulp.task('copy:libs', function () {
     gulp.src(['node_modules/rxjs/**/*'])
-        .pipe(gulp.dest('dist/vendor/js/rxjs'));
+        .pipe(gulp.dest('public/lib/js/rxjs'));
 
     // concatenate non-angular2 libs, shims & systemjs-config
     gulp.src([
@@ -18,19 +18,19 @@ gulp.task('copy:libs', function () {
     ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/vendor/js'));
+        .pipe(gulp.dest('public/lib/js'));
 
     // copy source maps
     gulp.src([
         'node_modules/es6-shim/es6-shim.map',
         'node_modules/reflect-metadata/Reflect.js.map',
         'node_modules/systemjs/dist/system-polyfills.js.map'
-    ]).pipe(gulp.dest('dist/vendor/js'));
+    ]).pipe(gulp.dest('public/lib/js'))
 
     // gulp.src([
     //     'node_modules/bootstrap/dist/css/bootstrap.*'
     // ]).pipe(gulp.dest('public/lib/css'));
 
     return gulp.src(['node_modules/@angular/**/*'])
-        .pipe(gulp.dest('dist/vendor/js/@angular'));
+        .pipe(gulp.dest('public/lib/js/@angular'));
 });

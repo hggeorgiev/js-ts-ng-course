@@ -19,5 +19,5 @@ gulp.task('compile:ts', function () {
         .pipe(sourcemaps.init())
         .pipe(tsc(tscConfig.compilerOptions))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/app'));
+        .pipe(gulp.dest('public/dist/js'));
 });

@@ -13,8 +13,10 @@
     ],
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
-    "outDir": "./dist/",
+    //Has no effect when using gulp
+    "outDir": "public/dist/js"
   },
+  // Add this so that the compiler knows what to compile
   "filesGlob": [
     "app/**/*.ts",
     "typings/**/*.d.ts"

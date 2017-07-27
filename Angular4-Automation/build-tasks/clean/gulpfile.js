@@ -1,6 +1,6 @@
 const del = require('del');
 
-gulp.task('clean:dist', function () {
-    return del('dist/');
+// Delete the 'public' folder
+gulp.task('clean:public', function () {
+    return del('public/');
 });
-
