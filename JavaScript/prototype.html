@@ -14,6 +14,7 @@
 			var myFather = new Person("John", "Doe", 50, "blue");
 			var myMother = new Person("Sally", "Rally", 48, "green");
 			
+			// You can add a function to the instance
 			//myFather.name = function () {
 			//	return this.firstName + " " + this.lastName;
 			//};
@@ -23,14 +24,14 @@
 			//console.log('myMother.name(): ' + myMother.name());
 			
 			//console.log('--- Person.residence -----------------------------');
-			// Cant add new property to prototype
-			Person.residence = "Canada";
+			// Can't add new property to prototype
+			Person.residence = "India";
 			//console.log('myFather.residence: ' + myFather.residence);
 			//console.log('myMother.residence: ' + myMother.residence);
 			
 			console.log('--- Person.prototype -----------------------------');
 			
-			Person.prototype.residence = "Canda";
+			Person.prototype.residence = "India";
 			//console.log('myFather.residence: ' + myFather.residence);
 			//console.log('myMother.residence: ' + myMother.residence);
 			

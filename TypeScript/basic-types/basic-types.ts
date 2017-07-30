@@ -18,8 +18,8 @@ function test() {
     let sentence: string = `Hello, my name is ${ name }.`
     
     // -- Array --
-    let list: number[] = [1, 2, 3];
-    let list2: Array<number> = [1, 2, 3];
+    let listArraySyntax: number[] = [1, 2, 3];
+    let listTypeSyntax: Array<number> = [1, 2, 3];
     
     // -- Tuple --
     let x: [string, number];

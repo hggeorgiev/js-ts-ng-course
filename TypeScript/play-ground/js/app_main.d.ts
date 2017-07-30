@@ -3,6 +3,7 @@ declare interface Array<T> {
 }
 
 interface ContactEditFormElement extends HTMLFormElement {
+	// Type restriction - id is a reserved word
 	id: HTMLInputElement
 	firstName: HTMLInputElement
 	lastName: HTMLInputElement

@@ -59,8 +59,11 @@
 			
 			document.write('<br/><br/>--- splice() ------------------------------- <br/>');
 			var source = array.slice();
+
+			// First two arguments - the indeces between which the splicing occurs
 			var removed = source.splice(2, 3, 'One', 'Two', 'Three');
 			document.write( 'Result: ' + source + '<br/>');
+			// Splice returns the removed objects
 			document.write( 'Removed: ' + removed );
 			
 			document.write('<br/><br/>--- concat() ------------------------------- <br/>');
