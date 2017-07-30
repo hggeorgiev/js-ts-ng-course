@@ -1,4 +1,4 @@
-/* Copyright (C) 2016 Pracxs Net & ITCE - All Rights Reserved
+/* Copyright (C) 2017 Centroida & ITCE - All Rights Reserved
  * You may use, distribute and modify this code under the
  * terms of the Prometheus courses license.
  *

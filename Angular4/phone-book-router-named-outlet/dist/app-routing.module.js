@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/* Copyright (C) 2016 Pracxs Net & ITCE - All Rights Reserved
+/* Copyright (C) 2017 Centroida & ITCE - All Rights Reserved
  * You may use, distribute and modify this code under the
  * terms of the Prometheus courses license.
  *

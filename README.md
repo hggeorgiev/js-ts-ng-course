@@ -229,8 +229,8 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 |Global Events in Angular 2|http://stackoverflow.com/questions/34700438/global-events-in-angular-2 |
 |Developing a Tabs Component in Angular 2|http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html |
 |The Ultimate Guide to Forms in Angular 2|http://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/ |
-|Custom Validators in Angular 2|http://blog.thoughtram.io/angular/2016/03/14/custom-validators-in-angular-2.html |
-|Angular 2 Change Detection Explained|http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html |
+|Custom Validators in Angular 2|http://blog.thoughtram.io/angular/2017/03/14/custom-validators-in-angular-2.html |
+|Angular 2 Change Detection Explained|http://blog.thoughtram.io/angular/2017/02/22/angular-2-change-detection-explained.html |
 |Jasmine|http://jasmine.github.io/ |
 |Karma|https://karma-runner.github.io/ |
 |Angular 2 Unit Testing recipes|https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.8x5d58123 |

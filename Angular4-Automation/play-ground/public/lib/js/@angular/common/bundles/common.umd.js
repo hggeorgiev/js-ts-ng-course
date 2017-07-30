@@ -3445,7 +3445,7 @@ var ISO8601_DATE_REGEX = /^(\d{4})-?(\d\d)-?(\d\d)(?:T(\d\d)(?::?(\d\d)(?::?(\d\
  *
  * Timezone of the formatted text will be the local system timezone of the end-user's machine.
  *
- * When the expression is a ISO string without time (e.g. 2016-09-19) the time zone offset is not
+ * When the expression is a ISO string without time (e.g. 2017-09-19) the time zone offset is not
  * applied and the formatted text will have the same day, month and year of the expression.
  *
  * WARNINGS:

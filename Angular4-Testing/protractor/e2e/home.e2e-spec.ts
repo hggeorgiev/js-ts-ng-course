@@ -10,7 +10,7 @@ describe('Home page', () => {
     })
 
     it('should have copyright', () => {
-        expect(homepage.getCopyrightText()).toEqual('© Copyright ITCE & Pracxs 2016')
+        expect(homepage.getCopyrightText()).toEqual('© Copyright ITCE & Pracxs 2017')
     })
     
     it('should have add button', () => {

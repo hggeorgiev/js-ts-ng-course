@@ -6,41 +6,41 @@
 	</head>
 	<body>
 		<script>
-			document.write("--- '02-05-2016'.replace('-', '/') ------------------------------ <br/>");
-			document.write('02-05-2016'.replace('-', '/'));
+			document.write("--- '02-05-2017'.replace('-', '/') ------------------------------ <br/>");
+			document.write('02-05-2017'.replace('-', '/'));
 			
-			document.write("<br/><br/>--- '02-05-2016'.replace(/-/, '/') ------------------------------ <br/>");
-			document.write('02-05-2016'.replace(/-/, '/'));
+			document.write("<br/><br/>--- '02-05-2017'.replace(/-/, '/') ------------------------------ <br/>");
+			document.write('02-05-2017'.replace(/-/, '/'));
 			
-			document.write("<br/><br/>--- '02-05-2016'.replace(/-/g, '/') ------------------------------ <br/>");
-			document.write('02-05-2016'.replace(/-/g, '/'));
+			document.write("<br/><br/>--- '02-05-2017'.replace(/-/g, '/') ------------------------------ <br/>");
+			document.write('02-05-2017'.replace(/-/g, '/'));
 			
-			document.write("<br/><br/>--- '02-05-2016'.replace(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m, '$3-$2-$1') ------------------------------ <br/>");
-			document.write('02-05-2016'.replace(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m, '$3-$2-$1'));
+			document.write("<br/><br/>--- '02-05-2017'.replace(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m, '$3-$2-$1') ------------------------------ <br/>");
+			document.write('02-05-2017'.replace(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m, '$3-$2-$1'));
 			
-			document.write("<br/><br/>--- '02-05-2016'.match(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m) ------------------------------ <br/>");
-			document.write(JSON.stringify('02-05-2016'.match(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m)));
+			document.write("<br/><br/>--- '02-05-2017'.match(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m) ------------------------------ <br/>");
+			document.write(JSON.stringify('02-05-2017'.match(/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m)));
 			
-			document.write("<br/><br/>--- (/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m).test('02-05-2016') ------------------------------ <br/>");
-			document.write((/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m).test('02-05-2016'));
+			document.write("<br/><br/>--- (/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m).test('02-05-2017') ------------------------------ <br/>");
+			document.write((/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/m).test('02-05-2017'));
 			
-			document.write("<br/><br/>--- (/([0-9]{2})-([0-9]{2})-([0-9]{4})/m).exec('02-05-2016') ------------------------------ <br/>");
-			document.write(JSON.stringify((/([0-9]{2})-([0-9]{2})-([0-9]{4})/m).exec('02-05-2016')));
+			document.write("<br/><br/>--- (/([0-9]{2})-([0-9]{2})-([0-9]{4})/m).exec('02-05-2017') ------------------------------ <br/>");
+			document.write(JSON.stringify((/([0-9]{2})-([0-9]{2})-([0-9]{4})/m).exec('02-05-2017')));
 			
-			document.write("<br/><br/>--- (/[0-9]+/m).exec('02-05-2016') ------------------------------ <br/>");
+			document.write("<br/><br/>--- (/[0-9]+/m).exec('02-05-2017') ------------------------------ <br/>");
 			var regex = /[0-9]+/m;
-			document.write(JSON.stringify(regex.exec('02-05-2016')) + '<br/>');
+			document.write(JSON.stringify(regex.exec('02-05-2017')) + '<br/>');
 			document.write('Last index: ' + regex.lastIndex);
 			
-			document.write("<br/><br/>--- (/[0-9]+/mg).exec('02-05-2016') ------------------------------ <br/>");
+			document.write("<br/><br/>--- (/[0-9]+/mg).exec('02-05-2017') ------------------------------ <br/>");
 			regex = /[0-9]+/mg;
-			document.write(JSON.stringify(regex.exec('02-05-2016')) + '<br/>');
+			document.write(JSON.stringify(regex.exec('02-05-2017')) + '<br/>');
 			document.write('Last index: ' + regex.lastIndex);
 			
-			document.write("<br/><br/>--- (/[0-9]+/mg).exec('02-05-2016') in loop ------------------------------ <br/>");
+			document.write("<br/><br/>--- (/[0-9]+/mg).exec('02-05-2017') in loop ------------------------------ <br/>");
 			regex = /[0-9]+/mg;
 			var res;
-			while(res = regex.exec('02-05-2016')) {
+			while(res = regex.exec('02-05-2017')) {
 				document.write(JSON.stringify(res) + '<br/>');
 				document.write('Index: ' + res.index + '<br/>');
 				document.write('Last index: ' + regex.lastIndex + '<br/>');
