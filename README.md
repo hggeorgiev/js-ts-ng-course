@@ -139,10 +139,6 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 	
 ## Angular 
 
-1. Hello world (with pure JavaScript)
-
-    Examples: [hello-world](https://embed.plnkr.co/?show=preview&show=app%2Fapp.component.ts)
-    
 1. Hello world (with TypeScript)
 
     Examples: [hello-world-ts](Angular4/hello-world-ts)
