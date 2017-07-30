@@ -7,7 +7,10 @@ class Person {
 }
 
 let p: Named;
-// OK, because of structural typing
+/**
+ * OK, because of structural typing - We have the same number of properties, of the same name and
+ of the same type
+ */
 p = new Person();
 
 

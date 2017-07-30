@@ -3,7 +3,7 @@
  * terms of the Prometheus courses license.
  *
  * You should have received a copy of the Prometheus courses
- * license.If not, please write to: prometheus@pracxs.com
+ * license.If not, please write to: info@itce.com
  * or to prometheus@itce.com
  */
 
