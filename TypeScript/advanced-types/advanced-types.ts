@@ -1,4 +1,4 @@
-// -- Union Types --
+ // -- Union Types --
 {
     function padLeft(value: string, padding: string | number) {
         // ...

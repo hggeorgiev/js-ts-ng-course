@@ -83,7 +83,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 
 1. Destructuring
     
-    Examples: [destructuring](TypeScript/destructing/destructing.ts)
+    Examples: [destructuring](TypeScript/destructuring/destructuring.ts)
     
 1. Interfaces
     
