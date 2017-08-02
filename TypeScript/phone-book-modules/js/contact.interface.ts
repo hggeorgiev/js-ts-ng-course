@@ -7,7 +7,7 @@
  * or to prometheus@itce.com
  */
 
-interface Contact {
+export interface Contact {
 	id: number,
 	firstName: string,
 	lastName: string,

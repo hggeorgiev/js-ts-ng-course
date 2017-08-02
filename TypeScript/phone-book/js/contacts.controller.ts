@@ -103,7 +103,7 @@ class ContactsController {
 				'<input name="contactId" type="hidden" value="' + contact.id + '">' +
 				'<label>First Name: </label><input name="firstName" value="' + contact.firstName + '"><br/>' +
 				'<label>Last Name: </label><input name="lastName" value="' + contact.lastName + '"><br/>' +
-				'<label>email: </label><input name="email" value="' + contact.email + '"><br/>' +
+				'<label>Email: </label><input name="email" value="' + contact.email + '"><br/>' +
 				'<label></label><input type="submit" class="btn btn-danger" value="' + ( !contactId ? 'Add' : 'Save' ) + '"/>' +
 				'<a href="#" class="text-danger" onclick="ctrl.cancelEdit(event)">Cancel</a>' +
 			'</form>';

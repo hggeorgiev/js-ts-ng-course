@@ -6,7 +6,7 @@ import {Component, Input} from '@angular/core';
     template: `
         <h1>My First Attribute Directive</h1>
         <h4>Pick a highlight color</h4>
-        
+
         <div>
             <input type="radio" name="colors" (click)="color='lightgreen'">Green
             <input type="radio" name="colors" (click)="color='yellow'">Yellow

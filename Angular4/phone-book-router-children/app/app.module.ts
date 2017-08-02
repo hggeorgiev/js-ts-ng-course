@@ -20,9 +20,10 @@ import { ContactsService }      from './contacts/contact.service'
 import { AboutComponent }         from './about/about.component'
 
 import { AppRoutingModule }     from './app-routing.module';
+import {ReactiveFormsModule} from "../../../Angular4-Automation/play-ground/public/lib/js/@angular/forms/src/form_providers";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule ],
   declarations: [ AppComponent, ContactsComponent, ContactsListComponent, ContactDetailsComponent, EmailValidator, AboutComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ContactsService ]

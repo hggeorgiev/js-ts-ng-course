@@ -3,22 +3,13 @@
  * terms of the Prometheus courses license.
  *
  * You should have received a copy of the Prometheus courses
- * license.If not, please write to: info@itce.com
+ * license.If not, please write to:
  * or to prometheus@itce.com
  */
-
-import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core'
-import { Router, ActivatedRoute }   from '@angular/router'
-import { NgForm }                   from '@angular/forms'
-import { Subscription }             from 'rxjs/Subscription'
-import { Observable }               from 'rxjs/Observable'
-import 'rxjs/add/observable/fromPromise'
-
-import { CanComponentDeactivate }   from '../can-deactivate-guard'
-import { Contact }                  from "./contact"
-import { ContactsService }          from "./contact.service"
-import { EmailValidator }           from "./email-validator.directive"
-import { DialogService }            from "../dialog.service"
+import {Component, Input, Output, OnChanges, EventEmitter} from '@angular/core'
+import {NgForm, FormBuilder, FormGroup, Validators} from '@angular/forms'
+import {Contact} from "./contact"
+import {ContactsService} from "./contact.service"
 
 @Component({
     selector: 'contact-details',
@@ -30,99 +21,82 @@ import { DialogService }            from "../dialog.service"
                 <label>email: </label><b>{{contact.email}}</b><br/>
                 <label></label><a class="text-danger" (click)="showEdit=true"><span class="glyphicon glyphicon-edit"></span>Edit</a><br/>
             </span>
-            <form name="editContactForm" #form="ngForm" (ngSubmit)="onSubmit(form)" *ngIf="showEdit" novalidate>
+            <form [formGroup]="contactForm" *ngIf="showEdit" novalidate>
                 <label for="firstName">First Name: </label>
-                <input id="firstName" name="firstName" [ngModel]="contact.firstName" required><br/>
-                <div class="alert alert-danger" role="alert" *ngIf="form.controls.firstName && !form.controls.firstName.pristine && !form.controls.firstName.valid">First name is required</div>
+                <input id="firstName" name="firstName" formControlName="firstName" [ngModel]="contact.firstName" required><br/>
+                <div class="alert alert-danger" role="alert" *ngIf="contactForm.controls.firstName && !contactForm.controls.firstName.pristine && !contactForm.controls.firstName.valid">First name is required</div>
                 
                 <label for="lastName">Last Name: </label>
-                <input id="lastName" name="lastName" [ngModel]="contact.lastName" required><br/>
-                <div class="alert alert-danger" role="alert" *ngIf="form.controls.lastName && !form.controls.lastName.pristine && !form.controls.lastName.valid">Last name is required</div>
+                <input id="lastName" name="lastName" formControlName="lastName" [ngModel]="contact.lastName" required><br/>
+                <div class="alert alert-danger" role="alert" *ngIf="contactForm.controls.lastName && !contactForm.controls.lastName.pristine && !contactForm.controls.lastName.valid">Last name is required</div>
                 
                 <label for="email">email: </label>
-                <input id="email" name="email" [ngModel]="contact.email" email><br/>
-                <div class="alert alert-danger" role="alert" *ngIf="form.controls.email && !form.controls.email.valid">Email is invalid</div>
+                <input id="email" name="email" formControlName="email" [ngModel]="contact.email" ><br/>
+                <div class="alert alert-danger" role="alert" *ngIf="contactForm.controls.email && !contactForm.controls.email.valid">Email is invalid</div>
                 
                 
                 <label></label>
-                <input type="submit" class="btn btn-danger" value="{{ !contact.id ? 'Add' : 'Save' }}" [disabled]="form.invalid || form.pristine" />
-                <a class="text-danger" (click)="onCancel()">Cancel</a>
+                <input type="submit" class="btn btn-danger" (click)="onSubmit()" value="{{ !contact.id ? 'Add' : 'Save' }}" [disabled]="contactForm.invalid || contactForm.pristine" />
+                <a href="#" class="text-danger" (click)="onCancel()">Cancel</a>
             </form>
         </div>
     `,
     styles: ['.alert {margin-left: 104px;}']
 })
-export class ContactDetailsComponent implements OnInit, OnDestroy, CanComponentDeactivate {
-    contact: Contact
-    showEdit: boolean
-    private sub: Subscription
+export class ContactDetailsComponent implements OnChanges {
+    @Input()
+    contact: Contact;
+    @Output()
+    contactChange = new EventEmitter<Contact>();
+    @Input()
+    showEdit: boolean;
 
-    @ViewChild('form') form: NgForm
-    
-    constructor(
-        private contactsService: ContactsService,
-        private router: Router,
-        private route: ActivatedRoute,
-        private dialogService: DialogService
-    ) {}
-    
-    ngOnInit() {
-        this.sub = this.route.params.subscribe(params=> {
-            let id: number = +params['id']
-            if( id > 0) {
-                if(!this.contact || this.contact.id != id) {
-                    this.contact = this.contactsService.getById(+id)
-                    this.showEdit = false
-                }
-            } else if(id===-1) {
-                this.contact = {id: null, firstName: '', lastName: '', email: ''}
-                this.showEdit = true
-            } else {
-                this.contact = null
-                this.showEdit = false
-            }
+    contactForm: FormGroup;
+
+
+    constructor(private _personService: ContactsService, private fb: FormBuilder) {
+        this.contactForm = this.fb.group({
+            firstName: ['', Validators.required],
+            lastName: ['', Validators.required],
+            email:['', Validators.email]
+
         })
-    }
-    
-    ngOnDestroy() {
-        this.sub.unsubscribe()
+
     }
 
-    onSubmit(form: NgForm) {
-        if(! form.valid) return;
-        
-        let dirtyContact: Contact = form.value
-        dirtyContact.id = this.contact.id
-        
-        let saveId: number
+    remove(person: Contact) {
+        this._personService.remove(person.id);
+    }
+
+    ngOnChanges(changes) {
+        if(changes && changes.contact && changes.contact.currentValue!==changes.contact.previousValue)
+            this.showEdit = ( this.contact && this.contact.id === null )
+    }
+
+    onSubmit() {
+        if(! this.contactForm.valid) return;
+
+        let dirtyContact: Contact = this.contactForm.value;
+        dirtyContact.id = this.contact.id;
+
         if(this.contact.id === null)
-            saveId = this.contactsService.add(dirtyContact)   
+            this._personService.add(dirtyContact) ;
         else
-            saveId = this.contactsService.update(dirtyContact);
-            
-        this.contact = this.contactsService.getById(saveId)
+            this._personService.update(dirtyContact);
 
-        this.router.navigate(['/contacts', saveId]);
+        this.contact = dirtyContact;
+
+        this.contactChange.emit(this.contact);
+
         this.showEdit = false
     }
-    
+
     onCancel() {
-        this.showEdit = false
-        
+        this.showEdit = false;
+
         if( this.contact.id === null ) {
-            this.router.navigate(['/contacts']);
-            // this.contactChange.emit(this.contact);
+            this.contact = null;
+            this.contactChange.emit(this.contact);
         }
     }
-
-    canDeactivate(): Observable<boolean> | boolean {
-        if ( ! this.showEdit || ! this.form.dirty )
-            return true
-        
-        // Otherwise ask the user with the dialog service and return its
-        // promise which resolves to true or false when the user decides
-        let p: Promise<boolean> = this.dialogService.confirm('Discard changes?')
-        let o = Observable.fromPromise(p)
-        return o
-    }
- }
+}

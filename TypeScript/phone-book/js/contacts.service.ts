@@ -14,7 +14,7 @@ declare interface Array<T> {
 }
 
 class ContactsService {
-	private static _contactId = 5
+	private static _contactId = 5;
 	private CONTACTS: Contact[] = [
 			{ id: 1, firstName: "Max", lastName: "Smith", email: "max@gmail.com" },
 			{ id: 2, firstName: "Chris", lastName: "Raches", email: "chris@gmail.com" },
@@ -42,11 +42,11 @@ class ContactsService {
 			return row.id == contactId;
 		})
 	}
-	
+
 	private findIndexById(contactId: number): number {
 		var contact = this.findById(contactId);
 		if( !contact ) return -1;
-		
+
 		return this.CONTACTS.indexOf(contact);
 	}
 	

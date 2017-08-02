@@ -7,4 +7,4 @@
  * or to prometheus@itce.com
  */
 
-enum EditMode { add, edit }
+const enum EditMode { add, edit }

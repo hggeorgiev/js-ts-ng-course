@@ -23,11 +23,11 @@ import {ContactsService} from "./contact.service"
             </span>
             <form [formGroup]="contactForm" *ngIf="showEdit" novalidate>
                 <label for="firstName">First Name: </label>
-                <input id="firstName" name="firstName" formControlName="firstName" [ngModel]="contact.firstName" required><br/>
+                <input id="firstName" name="firstName" formControlName="firstName" [ngModel]="contact.firstName" ><br/>
                 <div class="alert alert-danger" role="alert" *ngIf="contactForm.controls.firstName && !contactForm.controls.firstName.pristine && !contactForm.controls.firstName.valid">First name is required</div>
                 
                 <label for="lastName">Last Name: </label>
-                <input id="lastName" name="lastName" formControlName="lastName" [ngModel]="contact.lastName" required><br/>
+                <input id="lastName" name="lastName" formControlName="lastName" [ngModel]="contact.lastName"><br/>
                 <div class="alert alert-danger" role="alert" *ngIf="contactForm.controls.lastName && !contactForm.controls.lastName.pristine && !contactForm.controls.lastName.valid">Last name is required</div>
                 
                 <label for="email">email: </label>

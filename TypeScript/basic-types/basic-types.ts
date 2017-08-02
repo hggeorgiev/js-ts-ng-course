@@ -13,7 +13,7 @@ function test() {
     let color: string = "blue"
 
     // template strings
-    let fullName: string = `Bob Bobbington`
+    let fullName: string = `Bob Bobbington` 
     let age: number = 37
     let sentence: string = `Hello, my name is ${ name }.`
     

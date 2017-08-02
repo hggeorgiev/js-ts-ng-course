@@ -16,9 +16,10 @@ import { ContactsListComponent } from './contacts-list.component';
 import { ContactDetailsComponent } from './contact-details.component';
 import { EmailValidator } from './email-validator.directive';
 import { ContactsService } from './contact.service';
+import {ReactiveFormsModule} from "../../../Angular4-Automation/play-ground/public/lib/js/@angular/forms/src/form_providers";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpModule ],
+  imports:      [ BrowserModule, FormsModule, HttpModule, ReactiveFormsModule ],
   declarations: [ AppComponent, ContactsListComponent, ContactDetailsComponent, EmailValidator ],
   bootstrap:    [ AppComponent ],
   providers:    [ ContactsService ]

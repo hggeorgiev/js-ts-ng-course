@@ -29,21 +29,21 @@
 				observer.onNext(42)
 			}, 2000)
 			
-			console.log('Observable inited')
+			console.log('Observable intialized')
 			
-			//return function() {
-			//	console.log('Observable disposed')
-			//	clearTimeout(id)
-			//}
+			return function() {
+				console.log('Observable disposed')
+				clearTimeout(id)
+			}
 		})
 		
 		var disposable = source.forEach(function(x) { console.log('Observable emitted: ' + x) })
-		
-		//setTimeout(function(){
-		//	disposable.dispose()
-		//}, 1000)
-		
-		// source.subscribe(function(x) { console.log('Re subscubed Observable emitted: ' + x) })
+
+		setTimeout(function(){
+			disposable.dispose()
+		}, 1000)
+
+        source.subscribe(function(x) { console.log('Re subscribed Observable emitted: ' + x) })
 	</script>
 	
   </body>

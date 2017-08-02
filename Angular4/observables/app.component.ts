@@ -22,19 +22,26 @@ import 'rxjs/Rx'
 })
 export class AppComponent implements OnInit {
     ngOnInit() {
-        let addBtn = document.getElementById('add')
-        let subBtn = document.getElementById('sub')
+        let addBtn = document.getElementById('add');
+        let subBtn = document.getElementById('sub');
 
-        let counter = document.getElementById('counter')
+        let counter = document.getElementById('counter');
 
-        let increment$ = Observable.fromEvent(addBtn, 'click')
-        let decrement$ = Observable.fromEvent(subBtn, 'click')
+        let increment$ = Observable.fromEvent(addBtn, 'click');
+        let decrement$ = Observable.fromEvent(subBtn, 'click');
 
         let clicks$ = Observable.merge(increment$, decrement$)
-            .map( (event: any) => parseInt(event.target.value) )
+            .map( (event: any) => parseInt(event.target.value) );
 
+        // function to use and seed value
         let totals$ = clicks$
-            .scan((total, value) => total + value, 0 )
+            .scan((total, value) => {
+
+            console.log("The total is", total)
+            console.log("The new value is", value);
+            return total + value
+
+        }, 0 );
 
         // totals$.subscribe((deviation: number)=> console.log(deviation) )
 

@@ -3,7 +3,7 @@
 // Writing the function type
 
 {
-    let myAdd: (x: number, y: number)=>number =
+    let myAdd: (x: number, y: number) => number =
         function(x: number, y: number): number { return x+y; };
 }    
 
@@ -65,9 +65,10 @@ let employeeName = buildName4("Joseph", "Samuel", "Lucas", "MacKinzie");
         constructor(private multiplier:number) {}
         
         create() {
+            let that = this; // referring to the class
             return function(value: number) {
                 console.log(this)
-                return this.multiplier * value;
+                return that.multiplier * value;
             }
         }
     }
@@ -85,7 +86,7 @@ let employeeName = buildName4("Joseph", "Samuel", "Lucas", "MacKinzie");
         create() {
             return (value: number) => {
                 console.log(this)
-                return this.mulitiplier * value;
+                return this.mulitiplier * value; //referring to the class
             }
         }
         
@@ -105,6 +106,8 @@ interface Person {
 
 function findPerson(name: string): number
 function findPerson(id: number): Person
+
+
 function findPerson(data): number | Person {
 	if( typeof data === 'number' ) {
 		return {id: 1, name: 'Geoge'}

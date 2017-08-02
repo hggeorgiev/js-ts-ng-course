@@ -7,8 +7,8 @@
  * or to prometheus@itce.com
  */
 
-/// <reference path="Contact.interface.ts" />
 
+import {Contact} from "./contact.interface";
 import {EditMode} from "./edit-mode.enum"
 import {ContactsService} from "./contacts.service"
 

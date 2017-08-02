@@ -1,54 +1,57 @@
 <!doctype html>
 <html>
-  <head>
-  	<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  	<title>Pracxs Phone Book</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  	<link rel="stylesheet" href="/css/pracxs.css">
-  </head>
-  <body>
-    <nav id="header" class="navbar-default pracxs-header pracxs-box-shadow--2dp">
-	    <div class="container">
-        <a href="#/" class="logo col-xs-3"><img id="logo" style="height: 4em;" src="img/logo.png" alt="ITCE &amp; Pracxs"/></a>
-		 		<div class="text-right navbar-brand col-xs-9">
-          <ul class="header-links list-inline">
-            <li class="hidden-xs">Hello </li>
-            <li class="hidden-xs text-muted small">|</li>
-            <li><a class="btn btn-danger small text-small-caps" href="/logout">
-            	<span class="glyphicon glyphicon-log-out"></span> Exit
-            </a></li>
-		 			</ul>
-		 		</div>
-		  </div>
-    </nav>
+    <title>Pracxs Phone Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/pracxs.css">
+</head>
+<body>
+<nav id="header" class="navbar-default pracxs-header pracxs-box-shadow--2dp">
+    <div class="container">
+        <a href="#/" class="logo col-xs-3"><img id="logo" style="height: 4em;" src="img/logo.png"
+                                                alt="ITCE &amp; Pracxs"/></a>
+        <div class="text-right navbar-brand col-xs-9">
+            <ul class="header-links list-inline">
+                <li class="hidden-xs">Hello</li>
+                <li class="hidden-xs text-muted small">|</li>
+                <li><a class="btn btn-danger small text-small-caps" href="/logout">
+                    <span class="glyphicon glyphicon-log-out"></span> Exit
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <div id="content" class="container">
-		<div class="col-sm-8">
-			<div id="contactsListContainer"></div>
-			<a id="add" href="#" class="text-danger" onclick="ctrl.add(event)"><span class="glyphicon glyphicon-plus"></span>Add</a>
-			<a id="removeall" href="#" class="text-danger" onclick="ctrl.removeAll(event)"><span class="glyphicon glyphicon-minus"></span>Remove all</a>
-			<div id="contactsDetailsContainer"></div>
-		</div>
-	</div>
+<div id="content" class="container">
+    <div class="col-sm-8">
+        <div id="contactsListContainer"></div>
+        <a id="add" href="#" class="text-danger" onclick="ctrl.add(event)"><span
+                class="glyphicon glyphicon-plus"></span>Add</a>
+        <a id="removeall" href="#" class="text-danger" onclick="ctrl.removeAll(event)"><span
+                class="glyphicon glyphicon-minus"></span>Remove all</a>
+        <div id="contactsDetailsContainer"></div>
+    </div>
 
 
     <footer class="footer navbar-fixed-bottom">
-    	<div class="container">
-	      		<div class="copyright col-sm-8 text-muted">&copy; Copyright ITCE & Pracxs 2017</div>
-	      		<div class="text-right col-sm-4">
-		      		<ul class="footer-links list-inline">
-		      			<li><a target="_blank" href="http://www.itce.com/">ITCE</a></li>
-		      			<li class="text-muted small">|</li>
-		      			<li><a target="_blank" href="http://www.centroida.co/">Centroida</a></li>
-		      		</ul>
-	      		</div>
-	    </div>
+        <div class="container">
+            <div class="copyright col-sm-8 text-muted">&copy; Copyright ITCE & Pracxs 2017</div>
+            <div class="text-right col-sm-4">
+                <ul class="footer-links list-inline">
+                    <li><a target="_blank" href="http://www.itce.com/">ITCE</a></li>
+                    <li class="text-muted small">|</li>
+                    <li><a target="_blank" href="http://www.centroida.co/">Centroida</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
-		<script src="/js/pracxs.js"></script>
-  </body>
+    <script src="/js/pracxs.js"></script>
+</body>
 </html>

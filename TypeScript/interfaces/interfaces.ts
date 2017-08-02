@@ -2,6 +2,7 @@
 
 interface LabelledValue {
     label: string;
+    size?:number;
 }
 
 function printLabel(labelledObj: LabelledValue) {
@@ -43,7 +44,7 @@ interface SearchFunc {
 }
 
 let mySearch: SearchFunc;
-mySearch = function(src: string, sub: string) { // parameter names may not match
+mySearch = function(src: string, sub: string ) { // parameter names may not match
     let result = src.search(sub);
     if (result == -1) {
         return false;

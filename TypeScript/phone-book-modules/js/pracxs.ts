@@ -17,6 +17,7 @@ function bootstrap(): void {
 	(<any> window).ctrl = controller
 	
 	controller.drawContactsList()
+
 }
 
 bootstrap();
