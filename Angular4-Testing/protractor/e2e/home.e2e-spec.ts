@@ -10,7 +10,7 @@ describe('Home page', () => {
     })
 
     it('should have copyright', () => {
-        expect(homepage.getCopyrightText()).toEqual('© Copyright ITCE & Pracxs 2017')
+        expect<any>(homepage.getCopyrightText()).toEqual('© Copyright ITCE & Pracxs 2017')
     })
     
     it('should have add button', () => {
@@ -19,10 +19,10 @@ describe('Home page', () => {
     })
     
     it('showld have 5 contacts in the list', () => {
-        expect(homepage.contactsList.count()).toEqual(5)
+        expect<any>(homepage.contactsList.count()).toEqual(5)
     })
 
     it('showld have Max SMITH in the list', () => {
-        expect(homepage.contactsList.first().getText()).toEqual('Max SMITH')
+        expect<any>(homepage.contactsList.first().getText()).toEqual('Max SMITH')
     })
 });

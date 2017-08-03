@@ -5,8 +5,8 @@
   "description": "Centroida and ITCE AngularJS demo app",
   "author": "Todor Kisov <todor.kisov@pracxs.com> (http://pracxs.com)",
   "scripts": {
-    "build": "npm run wipe && tsc -p src",
-    "wipe": "IF EXIST .\\dist rd /S /Q .\\dist",
+//    "build": "npm run wipe && tsc -p src",
+//    "wipe": "IF EXIST .\\dist rd /S /Q .\\dist",
     "start": "http-server -c-1 -o -p 8875 .",
     "pretest": "npm run build",
     "test": "concurrently \"tsc -w -p src\" \"karma start karma.conf.js\"",
