@@ -24,12 +24,12 @@ const routes: Routes = [
       { path: '', component: ContactsListComponent , outlet: 'ContactsList' }
     ] 
   },
-  { 
-    path: '',       
+  {
+    path: '',
     component: ContactsComponent,
     children: [
       { path: '', component: ContactsListComponent , outlet: 'ContactsList' }
-    ] 
+    ]
   }
 ]
 
