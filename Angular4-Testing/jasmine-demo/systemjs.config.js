@@ -22,7 +22,7 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-
+       // angular testing bundles
 	  '@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
       '@angular/common/testing': 'npm:@angular/common/bundles/common-testing.umd.js',
       '@angular/compiler/testing': 'npm:@angular/compiler/bundles/compiler-testing.umd.js',

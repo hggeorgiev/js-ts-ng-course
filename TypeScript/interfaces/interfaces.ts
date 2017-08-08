@@ -189,17 +189,20 @@ c.interval = 5.0;
     }
 
     class Button extends Control {
-        select() { }
+        select() {
+        }
     }
 
     class TextBox extends Control {
-        select() { }
+        select() {
+        }
     }
 
     class Image extends Control {
     }
 
     class Location {
-        select() { }
-    } 
+        select() {
+        }
+    }
 }

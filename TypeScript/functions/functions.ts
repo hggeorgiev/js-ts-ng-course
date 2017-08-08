@@ -110,8 +110,23 @@ function findPerson(id: number): Person
 
 function findPerson(data): number | Person {
 	if( typeof data === 'number' ) {
-		return {id: 1, name: 'Geoge'}
+		return {id: 1, name: 'George'}
 	} else {
 		return 1
 	}
 }
+
+
+
+// Return type inferences
+function findPerson(data:number | any): number | Person {
+	if( typeof data === 'number' ) {
+		return {id: 1, name: 'George'} as Person;
+	} else {
+		return 1
+	}
+}
+
+let b:Person = findPerson('f');
+
+console.log(typeof b)

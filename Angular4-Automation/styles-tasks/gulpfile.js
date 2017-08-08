@@ -6,6 +6,6 @@ gulp.task('minify:css', function() {
         .src('css/*.css')
         .pipe(concat('global.min.css'))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('dist/css/global'));
+        .pipe(gulp.dest('public/dist/css/global'));
 
 });

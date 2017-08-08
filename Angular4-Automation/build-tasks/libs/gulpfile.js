@@ -14,7 +14,7 @@ gulp.task('copy:libs', function () {
         'node_modules/zone.js/dist/zone.js',
         'node_modules/reflect-metadata/Reflect.js',
         'node_modules/systemjs/dist/system.src.js',
-        'system.config.js'
+        'system.config.dep.js'
     ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())

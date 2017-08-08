@@ -7,4 +7,4 @@
  * or to prometheus@itce.com
  */
 
-export enum EditMode { add, edit }
+export const enum EditMode { add, edit }

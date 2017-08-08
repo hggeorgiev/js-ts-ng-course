@@ -12,7 +12,7 @@ function test() {
     // -- String --
     let color: string = "blue"
 
-    // template strings
+    // Template strings
     let fullName: string = `Bob Bobbington` 
     let age: number = 37
     let sentence: string = `Hello, my name is ${ name }.`
@@ -43,6 +43,8 @@ function test() {
     
     enum Color3 {Red = 1, Green = 2, Blue = 4}
     let c3: Color3 = Color3.Green;
+
+
     
     enum Color4 {Red = 1, Green, Blue}
     let colorName: string = Color4[2]
@@ -72,4 +74,10 @@ function test() {
     let num:number = 1;
     let str:any = '1';
     alert(<number>str + num); // result is not 2
+
+    
+
+
+
+    
 }
