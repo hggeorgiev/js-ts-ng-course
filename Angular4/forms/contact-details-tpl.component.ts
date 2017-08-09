@@ -31,7 +31,7 @@ import {EmailValidator} from "./email-validator.directive"
                 <input id="lastName" name="lastName" [ngModel]="contact.lastName" required><br/>
                 <div class="alert alert-danger" role="alert" *ngIf="form.controls.lastName && !form.controls.lastName.pristine && !form.controls.lastName.valid">Last name is required</div>
                 
-                <label for="email">email: </label>
+                <label for="email">Email: </label>
                 <input id="email" name="email" [ngModel]="contact.email" email><br/>
                 <div class="alert alert-danger" role="alert" *ngIf="form.controls.email && !form.controls.email.valid">Email is invalid</div>
                 

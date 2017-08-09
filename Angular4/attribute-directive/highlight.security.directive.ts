@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, Renderer, SecurityContext } from '@angular/core';
+import { Directive, ElementRef, Input, Renderer2, SecurityContext } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser'
 @Directive({
     selector: '[myHighlight]',
@@ -9,13 +9,13 @@ import { DomSanitizer } from '@angular/platform-browser'
 })
 export class HighlightDirective {
     @Input('myHighlight')
-    highlightColor: string
+    highlightColor: string;
     
-    _el: HTMLElement
+    _el: HTMLElement;
     
     constructor(
         el: ElementRef, 
-        private renderer: Renderer,
+        private renderer: Renderer2,
         private sanitizer: DomSanitizer
     ) {
       // el.nativeElement.style.backgroundColor = 'yellow';
@@ -26,11 +26,11 @@ export class HighlightDirective {
     onMouseLeave() { this._highlight(null); }
 
     private _highlight(color: string) {
-        this.renderer.setElementProperty( this._el.style, 'backgroundColor', color)
+        this.renderer.setProperty( this._el.style, 'backgroundColor', color)
         // XSS security issue example
         let val = "<script>console.log('XSS injection')</script>"
         // val = this.sanitizer.sanitize(SecurityContext.HTML, val)
-        // this.renderer.setElementProperty( this._el, 'innerHTML', val)
+        // this.renderer.setProperty( this._el, 'innerHTML', val)
         this._el.innerHTML = val
     }
 }

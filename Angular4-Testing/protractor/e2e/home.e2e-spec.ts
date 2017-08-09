@@ -3,14 +3,14 @@ import {HomePageObject} from './pageObjects/home.pageObject'
 
 describe('Home page', () => {
 
-    var homepage = new HomePageObject();
+    let homepage = new HomePageObject();
 
     beforeAll(() => { // beforeEach
         browser.get('#');
     })
 
     it('should have copyright', () => {
-        expect<any>(homepage.getCopyrightText()).toEqual('© Copyright ITCE & Pracxs 2017')
+        expect<any>(homepage.getCopyrightText()).toEqual('© Copyright ITCE & Centroida 2017')
     })
     
     it('should have add button', () => {
@@ -18,11 +18,11 @@ describe('Home page', () => {
         expect(homepage.addButton).not.toBeNull()
     })
     
-    it('showld have 5 contacts in the list', () => {
+    it('should have 5 contacts in the list', () => {
         expect<any>(homepage.contactsList.count()).toEqual(5)
     })
 
-    it('showld have Max SMITH in the list', () => {
+    it('should have Max SMITH in the list', () => {
         expect<any>(homepage.contactsList.first().getText()).toEqual('Max SMITH')
     })
 });

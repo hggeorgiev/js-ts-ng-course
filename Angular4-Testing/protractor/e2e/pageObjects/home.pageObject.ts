@@ -12,12 +12,8 @@ export class HomePageObject {
     getCopyrightText() {
         return this.copyright.getText()
     }
-    
-    /////
 
-    // typeInName(name: string) {
-    //     this.name.clear();
-    //     this.name.sendKeys(name);
-    //     this.hiButton.click();
-    // }
+
+    
+
 }
