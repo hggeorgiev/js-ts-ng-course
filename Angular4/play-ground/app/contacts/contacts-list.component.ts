@@ -20,7 +20,7 @@ import { Subscription } from "rxjs/Subscription"
     selector: 'contacts-list',
     template: `
         <ul>
-            <li *ngFor="let contact of contacts" class="item" [class.active]="selectedId == contact.id">
+            <li highlight="" *ngFor="let contact of contacts" class="item" [class.active]="selectedId == contact.id">
                 <a href='#' (click)='onSelect(contact)'>{{contact.firstName}} {{contact.lastName | myUpper}}</a>
                 <a href='#' (click)='onRemove(contact)' class='remove' title='Remove'><span class='glyphicon glyphicon-remove-sign'></span></a>
             </li>

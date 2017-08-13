@@ -31,7 +31,6 @@ describe('Details page', () => {
     });
 
     it('should add contact' , () => {
-
         homepage.addButton.click();
         detailpage.fillOutForm({firstName: 'Top' , lastName: 'Jarawal' , email: 'javatop@paysafe.com'});
         browser.driver.sleep(1000);

@@ -10,7 +10,7 @@ const CONTACTS_URL = 'contacts.json'
 export class LoadPersonsRealService {
         constructor(private http: Http) {}
         
-        load() {
+        getAll() {
             return this.http.get(CONTACTS_URL)
                     .map((res: Response) => {
 						let data: Person[] = res.json()

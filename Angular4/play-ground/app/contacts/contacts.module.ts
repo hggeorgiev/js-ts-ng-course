@@ -7,28 +7,31 @@
  * or to prometheus@itce.com
  */
 
-import { NgModule }                 from '@angular/core'
-import { FormsModule }              from '@angular/forms'
-import { CommonModule }            from '@angular/common'
-import { ContactsRoutingModule }    from './contacts-routing.module'
-import { MyUpperPipe }              from '../my-upper.pipe'
-import { ContactsComponent }        from './contacts.component'
-import { ContactsService }          from './contacts.service'
-import { ContactDetailsComponent }  from './contact-details.component'
-import { ContactsListComponent }    from "./contacts-list.component"
-import { EmailValidator }           from "../email-validator.directive"
-import { DialogService }            from "../dialog.service"
+import {NgModule}                 from '@angular/core'
+import {FormsModule}              from '@angular/forms'
+import {CommonModule}            from '@angular/common'
+import {ContactsRoutingModule}    from './contacts-routing.module'
+import {MyUpperPipe}              from '../my-upper.pipe'
+import {ContactsComponent}        from './contacts.component'
+import {ContactsService}          from './contacts.service'
+import {ContactDetailsComponent}  from './contact-details.component'
+import {ContactsListComponent}    from "./contacts-list.component"
+import {EmailValidator}           from "../email-validator.directive"
+import {DialogService}            from "../dialog.service"
+import {HighlightDirective} from "../highlight.directive";
 
 @NgModule({
-  imports:      [ CommonModule,
-                  FormsModule,
-                  ContactsRoutingModule ],
-  declarations: [ ContactsComponent,
-                  ContactsListComponent, 
-                  ContactDetailsComponent, 
-                  MyUpperPipe,
-                  EmailValidator ],
-  providers:    [ ContactsService,
-                  DialogService ]
+    imports: [CommonModule,
+        FormsModule,
+        ContactsRoutingModule],
+    declarations: [ContactsComponent,
+        ContactsListComponent,
+        ContactDetailsComponent,
+        MyUpperPipe,
+        HighlightDirective,
+        EmailValidator],
+    providers: [ContactsService,
+        DialogService]
 })
-export class ContactsModule {}
+export class ContactsModule {
+}
