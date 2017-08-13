@@ -121,17 +121,11 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
     
     Examples: [modules](TypeScript/modules), [namespaces](TypeScript/namespaces)
 
-1. JSX
-    
-    Examples: [jsx](TypeScript/jsx)
-
 1. Decorators
     
     Examples: [decorators](TypeScript/decorators/decorators.ts)
 
-1. Mixins
-    
-    Examples: [mixins](TypeScript/mixins/mixins.ts)
+
 
 ### Demo Apps
 - Phone book app based on namespaces in separated files [phone-book](TypeScript/phone-book)
@@ -161,7 +155,10 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
     
 1. HTTP Client
 
-    Examples: [observables-vs-promises](Angular4/observables-vs-promises/index.html), [observables](Angular4/observables)
+    Examples: [observables-vs-promises](Angular4/observables-vs-promises/index.html), [observables](Angular4/observables), [subject](Angular4/service-data)
+    
+    
+   
 
 ### Demo Apps
 - Phone book app [phone-book](Angular4/phone-book)
@@ -199,6 +196,9 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 
     Examples: [protractor](Angular4-Testing/protractor)
     
+    
+## Build automation
+
 1. Gulp - Build automation
 
     Examples: [gulp](Angular4-Automation/)
