@@ -1,8 +1,8 @@
 {
-  "name": "pracxs-angular-2-tester",
+  "name": "angular-4-tester",
   "version": "1.0.0",
   "private": true,
-  "description": "Centroida and ITCE AngularJS demo app",
+  "description": "Centroida and ITCE Angular demo app",
   "author": "Todor Kisov <todor.kisov@pracxs.com> (http://pracxs.com)",
   "scripts": {
 //    "build": "npm run wipe && tsc -p src",
