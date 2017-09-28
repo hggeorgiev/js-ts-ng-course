@@ -68,7 +68,7 @@ function makeAct( animal: Horse | Rabbit) {
 type A = {name: string, age: number}
 type B = {birthDate: Date}
 
-let person: A & B = {name: 'Todor', age:42, birthDate: new Date('1973-01-28')};
+let person: A & B = {name: 'Hristo', age:24, birthDate: new Date('1993-03-04')};
 document.write( 'Name: ' + person.name + '<br/>' );
 document.write( 'Age: ' + person.age + '<br/>' );
 document.write( 'Birth Date: ' + person.birthDate + '<br/>' );

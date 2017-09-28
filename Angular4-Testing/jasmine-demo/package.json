@@ -2,8 +2,8 @@
   "name": "angular-4-tester",
   "version": "1.0.0",
   "private": true,
-  "description": "Centroida and ITCE AngularJS demo app",
-  "author": "Todor Kisov <todor.kisov@pracxs.com> (http://pracxs.com)",
+  "description": "Centroida and ITCE Angular demo app",
+  "author": "Hristo Georgiev <hgeorgiev@centroida.co> (http://centroida.co)",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
