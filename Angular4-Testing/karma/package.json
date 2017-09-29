@@ -7,6 +7,7 @@
   "scripts": {
 //    "build": "npm run wipe && tsc -p src",
 //    "wipe": "IF EXIST .\\dist rd /S /Q .\\dist",
+//    "wipe": "rm -rf dist"
     "start": "http-server -c-1 -o -p 8875 .",
     "pretest": "npm run build",
     "test": "concurrently \"tsc -w -p src\" \"karma start karma.conf.js\"",
