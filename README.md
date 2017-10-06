@@ -231,6 +231,7 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 |Karma|https://karma-runner.github.io/ |
 |Angular 2 Unit Testing recipes|https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.8x5d58123 |
 |Protractor|http://angular.github.io/protractor/ |
+| Getting started with Protractor and Angular CLI | https://coryrylan.com/blog/introduction-to-e2e-testing-with-the-angular-cli-and-protractor |
 |Angular 2 Go with Protractor|https://github.com/CarmenPopoviciu/angular2-go-protractor
  Gulp | http://gulpjs.com|
  Getting started with Gulp | https://www.tutorialspoint.com/gulp/index.htm
