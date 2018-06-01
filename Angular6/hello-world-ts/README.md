@@ -1,4 +1,4 @@
-# Angular Training app
+# AngularTrainingApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
@@ -25,4 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Course source
 
 You can find the Github repository of the course [here](https://github.com/hggeorgiev/js-ts-ng-course).
-
