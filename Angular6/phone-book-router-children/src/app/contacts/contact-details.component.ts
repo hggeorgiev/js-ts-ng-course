@@ -65,7 +65,7 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
       lastName: ['', Validators.required],
       email: ['', Validators.email]
 
-    });
+    })
 
   }
 
@@ -79,9 +79,8 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
           email: this.contact.email
         });
       }
-    })
+    });
   }
-
 
   ngOnChanges(changes) {
     if (changes && changes.contact && changes.contact.currentValue !== changes.contact.previousValue)
