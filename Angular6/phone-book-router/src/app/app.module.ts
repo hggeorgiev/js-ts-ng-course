@@ -1,15 +1,7 @@
-/* Copyright (C) 2017 Centroida & ITCE - All Rights Reserved
- * You may use, distribute and modify this code under the
- * terms of the Prometheus courses license.
- *
- * You should have received a copy of the Prometheus courses
- * license.If not, please write to: info@itce.com
- * or to prometheus@itce.com
- */
 
 import { NgModule }             from '@angular/core'
 import { BrowserModule }        from '@angular/platform-browser'
-import { FormsModule }          from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RouterModule }         from '@angular/router'
 import { AppComponent }         from './app.component'
 import { ContactsComponent }    from './contacts/contacts.component'
@@ -21,7 +13,7 @@ import { AboutComponent }         from './about/about.component'
 import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule ],
   declarations: [ AppComponent, ContactsComponent, ContactsListComponent, ContactDetailsComponent, AboutComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ ContactsService ]
