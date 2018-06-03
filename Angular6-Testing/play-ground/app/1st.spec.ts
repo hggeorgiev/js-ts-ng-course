@@ -1,4 +1,4 @@
-import { async } from "@angular/core/testing" 
+// import {inject, addProviders} from '@angular/core/testing'
 
 describe('1st tests', () => {
     it('true is true', 
@@ -6,21 +6,10 @@ describe('1st tests', () => {
     )
     
     it('null is not the same thing as undefined',
-        () => {
-            expect(null).not.toEqual(undefined)
-        } 
+        () => expect(null).not.toEqual(undefined)
     )
-
-    it('Jasmine Async', async(
-        () => {
-            setTimeout(
-                ()=> expect(null).not.toEqual(undefined)
-                , 1000
-            )
-        }
-    ))
 })
 
-// describe('Future test',  () => {
+// xdescribe('Future test',  () => {
 //     it('Will check the future')
 // })

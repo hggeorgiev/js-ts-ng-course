@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { ContactsListComponent } from './contacts-list.component';
 import { ContactDetailsComponent } from './contact-details.component';
-// import { EmailValidator } from './email-validator.directive';
 import { ContactsService } from './contact.service';
 
 @NgModule({

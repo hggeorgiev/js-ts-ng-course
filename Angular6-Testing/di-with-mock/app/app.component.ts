@@ -4,7 +4,7 @@ import {PersonService} from './person.service'
 import {LoadPersonsService} from './load-persons.service'
 
 @Component({
-    selector: 'my-app',
+    selector: 'app-root',
     template: `
         <ul>
             <li *ngFor="let person of persons">{{person.firstName}} {{person.lastName}}</li>
@@ -14,9 +14,9 @@ import {LoadPersonsService} from './load-persons.service'
 })
 export class AppComponent implements OnInit {
     constructor(private _personService: PersonService) {}
-    
+
     persons: Person[]
-    
+
     ngOnInit() {
         this.persons = this._personService.getAll();
     }
