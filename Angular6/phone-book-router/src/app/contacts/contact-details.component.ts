@@ -17,22 +17,22 @@ import { ActivatedRoute } from "@angular/router";
             </span>
           <form [formGroup]="contactForm" *ngIf="showEdit" novalidate>
               <label for="firstName">First Name: </label>
-              <input id="firstName" name="firstName" formControlName="firstName"  required><br/>
+              <input id="firstName" name="firstName" formControlName="firstName" required><br/>
               <div class="alert alert-danger" role="alert"
                    *ngIf="contactForm.controls.firstName && !contactForm.controls.firstName.pristine && !contactForm.controls.firstName.valid">
                   First name is required
               </div>
 
               <label for="lastName">Last Name: </label>
-              <input id="lastName" name="lastName" formControlName="lastName" 
+              <input id="lastName" name="lastName" formControlName="lastName"
                      required><br/>
               <div class="alert alert-danger" role="alert"
                    *ngIf="contactForm.controls.lastName && !contactForm.controls.lastName.pristine && !contactForm.controls.lastName.valid">
                   Last name is required
               </div>
 
-              <label for="email">email: </label>
-              <input id="email" name="email" formControlName="email" ><br/>
+              <label for="email">Email: </label>
+              <input id="email" name="email" formControlName="email"><br/>
               <div class="alert alert-danger" role="alert"
                    *ngIf="contactForm.controls.email && !contactForm.controls.email.valid">Email is invalid
               </div>
@@ -65,7 +65,7 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
       lastName: ['', Validators.required],
       email: ['', Validators.email]
 
-    });
+    })
 
   }
 
@@ -73,15 +73,18 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
     this.route.params.subscribe((params) => {
       if (params["id"]) {
         this.contact = this._personService.getById(params["id"]);
+        if (this.contact == null) {
+          this.contact = { firstName: '' , lastName: '' , email: ''} as Contact;
+          this.showEdit = true;
+        }
         this.contactForm.reset({
           firstName: this.contact.firstName,
           lastName: this.contact.lastName,
           email: this.contact.email
         });
       }
-    })
+    });
   }
-
 
   ngOnChanges(changes) {
     if (changes && changes.contact && changes.contact.currentValue !== changes.contact.previousValue)
