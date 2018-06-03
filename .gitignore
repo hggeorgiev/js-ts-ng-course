@@ -34,14 +34,14 @@ node_modules
 TypeScript/greeter/greeter.js
 TypeScript/phone-book/js/pracxs.js.map
 TypeScript/phone-book/js/pracxs.js
-Angular2/play-ground/typings/
-Angular2/phone-book/typings/
+Angular6/play-ground/typings/
+Angular6/phone-book/typings/
 *.map
 Angular4-Testing/karma/src/typings/
-Angular2/phone-book-http/typings/
-Angular2/phone-book-router/typings/
+Angular6/phone-book-http/typings/
+Angular6/phone-book-router/typings/
 
-Angular2/play-ground/\.idea/
+Angular6/play-ground/\.idea/
 
 Angular4-Testing/play-ground/dist/
 
@@ -51,23 +51,23 @@ JavaScript/phone-book/\.idea/
 
 TypeScript/phone-book-modules/\.idea/
 
-Angular2/play-ground/dist/
+Angular6/play-ground/dist/
 
-Angular2/hello-world/\.idea/
+Angular6/hello-world/\.idea/
 
-Angular2/emitter/\.idea/
+Angular6/emitter/\.idea/
 
-Angular2/phone-book-http/\.idea/
+Angular6/phone-book-http/\.idea/
 
-Angular2/phone-book-router/\.idea/
+Angular6/phone-book-router/\.idea/
 
-Angular2/phone-book-router-named-outlet/\.idea/
+Angular6/phone-book-router-named-outlet/\.idea/
 
-Angular2/phone-book-router-children/\.idea/
+Angular6/phone-book-router-children/\.idea/
 
-Angular2/phone-book-router-modules-lazy/\.idea/
+Angular6/phone-book-router-modules-lazy/\.idea/
 
-Angular2/phone-book-router-modules/\.idea/
+Angular6/phone-book-router-modules/\.idea/
 
 Angular4-Testing/play-ground/\.idea/
 
@@ -77,7 +77,7 @@ TypeScript/type-compatibility/\.idea/
 
 TypeScript/play-ground/\.idea/
 
-Angular2/hello-world-ts/\.idea/
+Angular6/hello-world-ts/\.idea/
 
 .idea/
 
