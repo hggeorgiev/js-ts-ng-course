@@ -1,33 +1,26 @@
-/* Copyright (C) 2017 Centroida & ITCE - All Rights Reserved
- * You may use, distribute and modify this code under the
- * terms of the Prometheus courses license.
- *
- * You should have received a copy of the Prometheus courses
- * license.If not, please write to:
- * or to prometheus@itce.com
- */
+
 import {Component, Input, Output, OnChanges, EventEmitter} from '@angular/core'
 import {NgForm, FormBuilder, FormGroup, Validators} from '@angular/forms'
 import {Contact} from "./contact"
 import {ContactsService} from "./contact.service"
 
 @Component({
-    selector: 'contact-details',
-    template: `
+  selector: 'contact-details',
+  template: `
         <div id="contactsDetailsContainer" *ngIf="contact">
             <span *ngIf="!showEdit">
                 <label>First Name: </label><b>{{contact.firstName}}</b><br/>
                 <label>Last Name: </label><b>{{contact.lastName}}</b><br/>
-                <label>email: </label><b>{{contact.email}}</b><br/>
+                <label>Email: </label><b>{{contact.email}}</b><br/>
                 <label></label><a class="text-danger" (click)="showEdit=true"><span class="glyphicon glyphicon-edit"></span>Edit</a><br/>
             </span>
             <form [formGroup]="contactForm" *ngIf="showEdit" novalidate>
                 <label for="firstName">First Name: </label>
-                <input id="firstName" name="firstName" formControlName="firstName" [ngModel]="contact.firstName" ><br/>
+                <input id="firstName" name="firstName" formControlName="firstName" [ngModel]="contact.firstName" required><br/>
                 <div class="alert alert-danger" role="alert" *ngIf="contactForm.controls.firstName && !contactForm.controls.firstName.pristine && !contactForm.controls.firstName.valid">First name is required</div>
                 
                 <label for="lastName">Last Name: </label>
-                <input id="lastName" name="lastName" formControlName="lastName" [ngModel]="contact.lastName"><br/>
+                <input id="lastName" name="lastName" formControlName="lastName" [ngModel]="contact.lastName" required><br/>
                 <div class="alert alert-danger" role="alert" *ngIf="contactForm.controls.lastName && !contactForm.controls.lastName.pristine && !contactForm.controls.lastName.valid">Last name is required</div>
                 
                 <label for="email">email: </label>
@@ -41,62 +34,62 @@ import {ContactsService} from "./contact.service"
             </form>
         </div>
     `,
-    styles: ['.alert {margin-left: 104px;}']
+  styles: ['.alert {margin-left: 104px;}']
 })
 export class ContactDetailsComponent implements OnChanges {
-    @Input()
-    contact: Contact;
-    @Output()
-    contactChange = new EventEmitter<Contact>();
-    @Input()
-    showEdit: boolean;
+  @Input()
+  contact: Contact;
+  @Output()
+  contactChange = new EventEmitter<Contact>();
+  @Input()
+  showEdit: boolean;
 
-    contactForm: FormGroup;
+  contactForm: FormGroup;
 
 
-    constructor(private _personService: ContactsService, private fb: FormBuilder) {
-        this.contactForm = this.fb.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            email:['', Validators.email]
+  constructor(private _personService: ContactsService, private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email:['', Validators.email]
 
-        })
+    })
 
+  }
+
+  remove(person: Contact) {
+    this._personService.remove(person.id);
+  }
+
+  ngOnChanges(changes) {
+    if(changes && changes.contact && changes.contact.currentValue!==changes.contact.previousValue)
+      this.showEdit = ( this.contact && this.contact.id === null )
+  }
+
+  onSubmit() {
+    if(! this.contactForm.valid) return;
+
+    let dirtyContact: Contact = this.contactForm.value;
+    dirtyContact.id = this.contact.id;
+
+    if(this.contact.id === null)
+      this._personService.add(dirtyContact) ;
+    else
+      this._personService.update(dirtyContact);
+
+    this.contact = dirtyContact;
+
+    this.contactChange.emit(this.contact);
+
+    this.showEdit = false
+  }
+
+  onCancel() {
+    this.showEdit = false;
+
+    if( this.contact.id === null ) {
+      this.contact = null;
+      this.contactChange.emit(this.contact);
     }
-
-    remove(person: Contact) {
-        this._personService.remove(person.id);
-    }
-
-    ngOnChanges(changes) {
-        if(changes && changes.contact && changes.contact.currentValue!==changes.contact.previousValue)
-            this.showEdit = ( this.contact && this.contact.id === null )
-    }
-
-    onSubmit() {
-        if(! this.contactForm.valid) return;
-
-        let dirtyContact: Contact = this.contactForm.value;
-        dirtyContact.id = this.contact.id;
-
-        if(this.contact.id === null)
-            this._personService.add(dirtyContact) ;
-        else
-            this._personService.update(dirtyContact);
-
-        this.contact = dirtyContact;
-
-        this.contactChange.emit(this.contact);
-
-        this.showEdit = false
-    }
-
-    onCancel() {
-        this.showEdit = false;
-
-        if( this.contact.id === null ) {
-            this.contact = null;
-            this.contactChange.emit(this.contact);
-        }
-    }
+  }
 }

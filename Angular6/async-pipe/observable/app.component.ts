@@ -1,23 +1,24 @@
 import {Component} from '@angular/core';
 import {OnInit} from '@angular/core';
-import {Observable} from 'rxjs/Rx';
+import {Observable} from 'rxjs';
 
 @Component({
-    selector: 'my-app',
-    template: `
+  selector: 'app-root',
+  template: `
         {{ message | async}} 
     `
 })
 export class AppComponent implements OnInit {
-    message: Observable<string>;
-    
-    ngOnInit() {
-        this.message = Observable.create( (observer) => {
-            setTimeout( () => observer.next('Hi, I am an observable message'), 2000 )
-        })
+  message: Observable<string>;
+
+  ngOnInit() {
+    this.message = Observable.create( (observer) => {
+      setTimeout( () => observer.next('Hi, I am an observable message'), 2000 )
+    })
 
 
-    }
+  }
 
 
- }
+}
+

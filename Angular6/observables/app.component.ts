@@ -1,50 +1,41 @@
-/* Copyright (C) 2017 Centroida & ITCE - All Rights Reserved
- * You may use, distribute and modify this code under the
- * terms of the Prometheus courses license.
- *
- * You should have received a copy of the Prometheus courses
- * license.If not, please write to:
- * or to prometheus@itce.com
- */
 import { Component, OnInit } from '@angular/core'
-import { Observable } from 'rxjs/Observable'
-import 'rxjs/Rx'
+import { fromEvent, merge } from "rxjs";
+import { map, scan } from "rxjs/internal/operators";
+
 
 @Component({
-    selector: 'my-app',
-    template: `
-        Counter: <span id="counter"></span><br/>
-        <br/>
+  selector: 'app-root',
+  template: `
+    Counter: <span id="counter"></span><br/>
+    <br/>
 
-        <button id="add" value="+1">+</button>
-        <button id="sub" value="-1">-</button>
-    `
+    <button id="add" value="+1">+</button>
+    <button id="sub" value="-1">-</button>
+  `
 })
 export class AppComponent implements OnInit {
-    ngOnInit() {
-        let addBtn = document.getElementById('add');
-        let subBtn = document.getElementById('sub');
+  ngOnInit() {
+    let addBtn = document.getElementById('add');
+    let subBtn = document.getElementById('sub');
 
-        let counter = document.getElementById('counter');
+    let counter = document.getElementById('counter');
 
-        let increment$ = Observable.fromEvent(addBtn, 'click');
-        let decrement$ = Observable.fromEvent(subBtn, 'click');
+    let increment$ = fromEvent(addBtn, 'click');
+    let decrement$ = fromEvent(subBtn, 'click');
+    let clicks$    = merge(increment$, decrement$).pipe(map((event: any) => parseInt(event.target.value)))
+    // function to use and seed value
+    let totals$    = clicks$.pipe(scan((total, value) => {
 
-        let clicks$ = Observable.merge(increment$, decrement$)
-            .map( (event: any) => parseInt(event.target.value) );
+        console.log("The total is", total)
+        console.log("The new value is", value);
+        return total + value
 
-        // function to use and seed value
-        let totals$ = clicks$
-            .scan((total, value) => {
+      }, 0)
+    )
 
-            console.log("The total is", total)
-            console.log("The new value is", value);
-            return total + value
 
-        }, 0 );
+    // totals$.subscribe((deviation: number)=> console.log(deviation) )
 
-        // totals$.subscribe((deviation: number)=> console.log(deviation) )
-
-        totals$.subscribe( total => counter.innerHTML = total.toString() )
-    }
+    totals$.subscribe(total => counter.innerHTML = total.toString())
+  }
 }
