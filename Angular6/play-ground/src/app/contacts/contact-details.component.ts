@@ -1,8 +1,11 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core'
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { Contact } from "./contact"
-import { ContactsService } from "./contact.service"
-import { ActivatedRoute } from "@angular/router";
+import { Component, OnInit, ViewChild } from '@angular/core'
+import { ActivatedRoute, Params, Router } from '@angular/router'
+import { FormBuilder, FormGroup, NgForm, Validators } from "@angular/forms"
+import { ContactsService } from "./contacts.service"
+import { CanComponentDeactivate } from "../can-deactivate-guard"
+import { DialogService } from "../dialog.service"
+import { from, Observable } from "rxjs/index";
+import { map } from "rxjs/internal/operators";
 
 @Component({
   selector: 'contact-details',
@@ -45,21 +48,16 @@ import { ActivatedRoute } from "@angular/router";
               <a href="#" class="text-danger" (click)="onCancel()">Cancel</a>
           </form>
       </div>
-  `,
-  styles: ['.alert {margin-left: 104px;}']
+  `
 })
-export class ContactDetailsComponent implements OnChanges, OnInit {
-  @Input()
-  contact: Contact;
-  @Output()
-  contactChange = new EventEmitter<Contact>();
-  @Input()
-  showEdit: boolean;
+export class ContactDetailsComponent implements OnInit, CanComponentDeactivate {
+  contact: Contact
+  contactForm: FormGroup
+  showEdit = false
 
-  contactForm: FormGroup;
+  @ViewChild('form') form: NgForm
 
-
-  constructor(private _personService: ContactsService, private fb: FormBuilder, private route: ActivatedRoute) {
+  constructor(private contactsService: ContactsService, private fb: FormBuilder, private route: ActivatedRoute, private router: Router, private dialogService: DialogService) {
     this.contactForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -69,57 +67,66 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
 
   }
 
-  ngOnInit() {
-    this.route.params.subscribe((params) => {
-      if (params["id"]) {
-        this.contact = this._personService.getById(params["id"]);
-        if (this.contact == null) {
-          this.contact  = {firstName: '', lastName: '', email: ''} as Contact;
-          this.showEdit = true;
-        }
-        this.contactForm.reset({
-          firstName: this.contact.firstName,
-          lastName: this.contact.lastName,
-          email: this.contact.email
-        });
-      }
-    });
-  }
+  onCancel() {
+    this.showEdit = false
 
-  ngOnChanges(changes) {
-    if (changes && changes.contact && changes.contact.currentValue !== changes.contact.previousValue)
-      this.showEdit = ( this.contact && this.contact.id === null )
+    if (this.contact && this.contact.id === -1) {
+      this.router.navigate(['/contacts'])
+    }
+
+    return false
   }
 
   onSubmit() {
-    if (!this.contactForm.valid) return;
 
-    let dirtyContact: Contact = this.contactForm.value;
-    dirtyContact.id           = this.contact.id;
 
-    if (this.contact.id === null)
-      this._personService.add(dirtyContact);
-    else
-      this._personService.update(dirtyContact);
+    if (!this.contactForm.valid) return
 
-    this.contact = dirtyContact;
+    let dirtyContact: Contact = this.contactForm.value
+    dirtyContact.id           = this.contact.id
 
-    this.contactChange.emit(this.contact);
+    if (this.contact.id === -1) {
+      this.contactsService.add(dirtyContact)
+      this.router.navigate(['contacts', dirtyContact.id])
+    } else {
+      this.contactsService.update(dirtyContact);
+    }
+
+    this.contact = dirtyContact
 
     this.showEdit = false
   }
 
-  onCancel() {
-    this.showEdit = false;
+  ngOnInit() {
+    this.route.params.pipe(map((params: Params) => +params['id']))
 
-    if (this.contact.id === null) {
-      this.contact = null;
-      this.contactChange.emit(this.contact);
-    }
+      .subscribe(
+        id => {
+          if (id > 0) {
+            this.contact = this.contactsService.getById(+id)
+            this.contactForm.reset({
+              firstName: this.contact.firstName,
+              lastName: this.contact.lastName,
+              email: this.contact.email
+            });
+            this.showEdit = false
+          } else if (id === -1) {
+            this.contact  = {id: -1, firstName: '', lastName: '', email: ''}
+            this.showEdit = true
+          } else {
+            this.contact  = null
+            this.showEdit = false
+          }
+        }
+      )
   }
 
-  remove(person: Contact) {
-    this._personService.remove(person.id);
-  }
+  canDeactivate(): Observable<boolean> | boolean {
+    if (!this.showEdit || !this.contactForm.dirty)
+      return true
 
+    let p: Promise<boolean> = this.dialogService.confirm('Discard changes?')
+    let o                   = from(p)
+    return o
+  }
 }

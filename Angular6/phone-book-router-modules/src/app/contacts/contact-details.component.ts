@@ -49,11 +49,7 @@ import { ActivatedRoute } from "@angular/router";
   styles: ['.alert {margin-left: 104px;}']
 })
 export class ContactDetailsComponent implements OnChanges, OnInit {
-  @Input()
   contact: Contact;
-  @Output()
-  contactChange = new EventEmitter<Contact>();
-  @Input()
   showEdit: boolean;
 
   contactForm: FormGroup;
@@ -104,7 +100,6 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
 
     this.contact = dirtyContact;
 
-    this.contactChange.emit(this.contact);
 
     this.showEdit = false
   }
@@ -114,7 +109,6 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
 
     if (this.contact.id === null) {
       this.contact = null;
-      this.contactChange.emit(this.contact);
     }
   }
 

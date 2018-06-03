@@ -1,11 +1,4 @@
-/* Copyright (C) 2017 Centroida & ITCE - All Rights Reserved
- * You may use, distribute and modify this code under the
- * terms of the Prometheus courses license.
- *
- * You should have received a copy of the Prometheus courses
- * license.If not, please write to:
- * or to prometheus@itce.com
- */
+
 
 import {Injectable} from "@angular/core"
 
@@ -14,11 +7,11 @@ export class ContactsService {
 	static _contactId = 1;
 	
 	CONTACTS: Contact[] = [
-			{ id: ContactsService._contactId++, firstName: "Max", lastName: "Smith", email: "max@gmail.com" },
-			{ id: ContactsService._contactId++, firstName: "Chris", lastName: "Raches", email: "chris@gmail.com" },
-			{ id: ContactsService._contactId++, firstName: "Michael", lastName: "Alloy", email: "michael@gmail.com" },
-			{ id: ContactsService._contactId++, firstName: "John", lastName: "Doe", email: "john@gmail.com" },
-			{ id: ContactsService._contactId++, firstName: "Jenny", lastName: "Doe", email: "jenny@gmail.com" }
+			{ id: ContactsService._contactId++, firstName: "Gordon", lastName: "Freeman", email: "freeman@blackmesa.com" },
+			{ id: ContactsService._contactId++, firstName: "Alyx", lastName: "Vance", email: "alyx@resitance.com" },
+			{ id: ContactsService._contactId++, firstName: "Wallace", lastName: "Breen", email: "breen@blackmesa.com"},
+			{ id: ContactsService._contactId++, firstName: "Barney", lastName: "Calhoun", email: "calhoun@blackmesa.com" },
+			{ id: ContactsService._contactId++, firstName: "Eli", lastName: "Vance", email: "vance@blackmesa.com" }
 		];
 		
 	getAll() {

@@ -1,13 +1,14 @@
 import { NgModule }                 from '@angular/core'
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router'
-import { FailComponent } from "./fail/fail.component"
+
 import { SelectivePreloadingStrategy } from "./selective-preloading-strategy";
+import { NotFoundComponent } from "./not-found/not-found.component";
 
 let routes: Routes = [
-    { path: 'contacts',   loadChildren: 'app/contacts/contacts.module#ContactsModule' },
-    { path: 'about',      loadChildren: 'app/about/about.module#AboutModule', data: { preload: true } },
+    { path: 'contacts',   loadChildren: 'src/app/contacts/contacts.module#ContactsModule' },
+    { path: 'about',      loadChildren: 'src/app/about/about.module#AboutModule', data: { preload: true } },
     { path: '',           redirectTo: '/contacts', pathMatch: 'full' },
-    { path: '**',         component: FailComponent }
+    { path: '**',         component: NotFoundComponent}
 ];
 
 @NgModule({
