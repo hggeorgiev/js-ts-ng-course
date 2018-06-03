@@ -1,6 +1,6 @@
-# Angular Intro
+# Introduction to JavaScrpt, TypeScript and Angular
 
-This course is intended to make quick introduction into JavaScript, TypeScript and Angular. 
+A 5-day crash course into front-end web development.
 
 ## JavaScript
 
@@ -223,3 +223,11 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 |Angular 2 Go with Protractor|https://github.com/CarmenPopoviciu/angular2-go-protractor
  Gulp | http://gulpjs.com|
  Getting started with Gulp | https://www.tutorialspoint.com/gulp/index.htm
+
+
+
+### Author
+
+| [![Hristo Georgiev](https://github.com/hggeorgiev.png?size=100)](https://github.com/hggeorgiev) |
+|---------------------------------------------------------------------------------------------------|
+| [Hristo Georgiev](https://github.com/hggeorgiev)                                                |

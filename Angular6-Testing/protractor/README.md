@@ -1,4 +1,4 @@
-# Tapp
+# Angular 6 Training App - Testing<
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
