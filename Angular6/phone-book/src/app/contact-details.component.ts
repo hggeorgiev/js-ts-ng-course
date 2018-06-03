@@ -11,7 +11,7 @@ import {ContactsService} from "./contact.service"
             <span *ngIf="!showEdit">
                 <label>First Name: </label><b>{{contact.firstName}}</b><br/>
                 <label>Last Name: </label><b>{{contact.lastName}}</b><br/>
-                <label>email: </label><b>{{contact.email}}</b><br/>
+                <label>Email: </label><b>{{contact.email}}</b><br/>
                 <label></label><a class="text-danger" (click)="showEdit=true"><span class="glyphicon glyphicon-edit"></span>Edit</a><br/>
             </span>
             <form [formGroup]="contactForm" *ngIf="showEdit" novalidate>

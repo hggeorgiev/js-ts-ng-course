@@ -74,7 +74,7 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
       if (params["id"]) {
         this.contact = this._personService.getById(params["id"]);
         if (this.contact == null) {
-          this.contact = { firstName: '' , lastName: '' , email: ''} as Contact;
+          this.contact  = {firstName: '', lastName: '', email: ''} as Contact;
           this.showEdit = true;
         }
         this.contactForm.reset({
