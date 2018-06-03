@@ -14,22 +14,21 @@ describe('PersonService', () => {
         }
     }
 
-    beforeAll( () => TestBed.initTestEnvironment( BrowserDynamicTestingModule, platformBrowserDynamicTesting() ) )
-    
+
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [
                 PersonService,
-                { provide: LoadPersonsService, useClass: LoadPersonsServiceMock } 
+                { provide: LoadPersonsService, useClass: LoadPersonsServiceMock }
             ]
         })
     })
-    
+
     it('must have 2 persons', inject([PersonService], (personService) => {
         let persons = personService.getAll();
         expect(persons.length).toBe(2)
     }))
-    
+
     it('1st person id should 1', inject([PersonService], (personService) => {
         let persons = personService.getAll();
         expect(persons[0].id).toBe(1)

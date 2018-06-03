@@ -1,14 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-/* ----------------------------------------------------
 
-Copyright (C) 2018  ITCE - All Rights Reserved
-You may use, distribute and modify this code under the
-terms of the Prometheus courses license.
-
-You should have received a copy of the Prometheus courses
-license.If not, please write to: info@itce.com
-or to prometheus@itce.com
----------------------------------------------------- */
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .pracxs-box-shadow--2dp {

@@ -2,11 +2,11 @@
 import {Component} from '@angular/core';
 
 let PERSONS = [
-    { "name": "Max", },
-    { "name": "Chris", },
-    { "name": "Michael", },
-    { "name": "John", },
-    { "name": "Jenny", } ]
+    { "name": "Gordon", },
+    { "name": "Alyx", },
+    { "name": "Eli", },
+    { "name": "Barney", },
+    { "name": "Kleiner", } ]
 
 
 @Component({

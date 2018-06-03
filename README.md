@@ -135,73 +135,61 @@ This course is intended to make quick introduction into JavaScript, TypeScript a
 
 1. Hello world (with TypeScript)
 
-    Examples: [hello-world-ts](Angular4/hello-world-ts)
+    Examples: [hello-world-ts](Angular6/hello-world-ts)
     
 1. Attribute, class & style bindings
 
-    Examples: [user-inputs](Angular4/user-inputs), [emitter](Angular4/emitter)
+    Examples: [user-inputs](Angular6/user-inputs), [emitter](Angular6/emitter)
     
 1. Forms
 
-    Examples: [debounce](Angular4/debounce)
+    Examples: [debounce](Angular6/debounce)
     
 1. Pipes
     
-    Examples: [pipes](Angular4/pipes), [async-pipe](Angular4/async-pipe)
+    Examples: [pipes](Angular6/pipes), [async-pipe](Angular6/async-pipe)
 
 1. Custom Attribute Directive
 
-    Examples: [attribute-directive](Angular4/attribute-directive)
+    Examples: [attribute-directive](Angular6/attribute-directive)
     
 1. HTTP Client
 
-    Examples: [observables-vs-promises](Angular4/observables-vs-promises/index.html), [observables](Angular4/observables), [subject](Angular4/service-data)
+    Examples: [observables-vs-promises](Angular6/observables-vs-promises/index.html), [observables](Angular6/observables), [subject](Angular6/service-data)
     
     
    
 
 ### Demo Apps
-- Phone book app [phone-book](Angular4/phone-book)
-- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular4/phone-book-http)
-- Router base phone book app [phone-book-router](Angular4/phone-book-router)
-- Router base phone book app with child router outlet [phone-book-router-children](Angular4/phone-book-router-children)
-- Router base phone book app that loads sub-module immediate [phone-book-router-modules](Angular4/phone-book-router-modules)
-- Router base phone book app that loads sub-module lazy [phone-book-router-modules-lazy](Angular4/phone-book-router-modules-lazy)
-- Router base phone book app that uses named outlet [phone-book-router-named-outlet](Angular4/phone-book-router-named-outlet)
+- Phone book app [phone-book](Angular6/phone-book)
+- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular6/phone-book-http)
+- Router base phone book app [phone-book-router](Angular6/phone-book-router)
+- Router base phone book app with child router outlet [phone-book-router-children](Angular6/phone-book-router-children)
+- Router base phone book app that loads sub-module immediate [phone-book-router-modules](Angular6/phone-book-router-modules)
+- Router base phone book app that loads sub-module lazy [phone-book-router-modules-lazy](Angular6/phone-book-router-modules-lazy)
+- Router base phone book app that uses named outlet [phone-book-router-named-outlet](Angular6/phone-book-router-named-outlet)
 
 	
 ## Testing with Angular
 
-1. Jasmine - Behavior-Driven JavaScript
-
-    Examples: [jasmine-demo](Angular4-Testing/jasmine-demo)
 
 1. Dependency injection without mocking
 
-    Examples: [di-no-mock](Angular4-Testing/di-no-mock)
+    Examples: [di-no-mock](Angular6-Testing/di-no-mock)
     
 1. Dependency injection with mocking
     
-    Examples: [di-with-mock](Angular4-Testing/di-with-mock)
+    Examples: [di-with-mock](Angular6-Testing/di-with-mock)
 
 1. Different testing scenarios example
 
-    Examples: [test-pack](Angular4-Testing/test-pack)
-
-1. Karma - The Spectacular Test Runner for Javascript
-
-    Examples: [karma](Angular4-Testing/karma)
+    Examples: [test-pack](Angular6-Testing/test-pack)
 
 1. Protractor - End to end testing for Angular
 
-    Examples: [protractor](Angular4-Testing/protractor)
+    Examples: [protractor](Angular6-Testing/protractor)
     
-    
-## Build automation
 
-1. Gulp - Build automation
-
-    Examples: [gulp](Angular4-Automation/)
 
 ## Useful links
 |Ttile|Link|
