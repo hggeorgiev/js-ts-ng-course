@@ -1,4 +1,4 @@
-# Introduction to JavaScrpt, TypeScript and Angular
+# Introduction to JavaScript, TypeScript and Angular
 
 A 5-day crash course into front-end web development.
 
