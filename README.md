@@ -130,6 +130,7 @@ A 5-day crash course into front-end web development.
 ### Demo Apps
 - Phone book app based on namespaces in separated files [phone-book](TypeScript/phone-book)
 - Phone book app based on modules [phone-book-modules](TypeScript/phone-book-modules)
+
 	
 ## Angular 
 
@@ -143,8 +144,8 @@ A 5-day crash course into front-end web development.
     
 1. Forms
 
-    Examples: [debounce](Angular6/debounce)
-    
+    Examples: [debounce](Angular6/debounce), [emitter](Angular6/emitter), [model vs template-driven](Angular6/forms)
+
 1. Pipes
     
     Examples: [pipes](Angular6/pipes), [async-pipe](Angular6/async-pipe)
@@ -157,17 +158,22 @@ A 5-day crash course into front-end web development.
 
     Examples: [observables-vs-promises](Angular6/observables-vs-promises/index.html), [observables](Angular6/observables), [subject](Angular6/service-data)
     
-    
-   
+1. Resolving routes:
+
+    Examples: [resolver](Agnular6/resolver)
+
+1. Passing state through services:
+
+    Examples: [service-data](Angular6/service-data)
 
 ### Demo Apps
 - Phone book app [phone-book](Angular6/phone-book)
 - HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular6/phone-book-http)
 - Router base phone book app [phone-book-router](Angular6/phone-book-router)
 - Router base phone book app with child router outlet [phone-book-router-children](Angular6/phone-book-router-children)
-- Router base phone book app that loads sub-module immediate [phone-book-router-modules](Angular6/phone-book-router-modules)
-- Router base phone book app that loads sub-module lazy [phone-book-router-modules-lazy](Angular6/phone-book-router-modules-lazy)
-- Router base phone book app that uses named outlet [phone-book-router-named-outlet](Angular6/phone-book-router-named-outlet)
+- Router base phone book app that uses modules[phone-book-router-modules](Angular6/phone-book-router-modules)
+- Router base phone book app that uses lazy-loaded modules [phone-book-router-modules-lazy](Angular6/phone-book-router-modules-lazy)
+- Router base phone book app that uses a named outlet [phone-book-router-named-outlet](Angular6/phone-book-router-named-outlet)
 
 	
 ## Testing with Angular
@@ -202,15 +208,16 @@ A 5-day crash course into front-end web development.
 |JavaScript Module Pattern|http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html |
 |Understanding JavaScript Function Invocation and "this"|http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/ |
 |JavaScript Inheritance|http://javascript.info/tutorial/inheritance |
+|Does it Mutate? | https://doesitmutate.xyz/|
 |TypeScript official site|http://www.typescriptlang.org/ |
-|TypeScript Language Specification|https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md |
-|Introduction to TypeScript by Jess Chadwick|https://youtu.be/qRD7bkK7m10 |
 |Metaprogramming in ES6: Symbols and why they're awesome|http://blog.keithcirkel.co.uk/metaprogramming-in-es6-symbols/ |
 |RxJS Observables vs Promises|https://egghead.io/lessons/rxjs-rxjs-observables-vs-promises |
-|RxJS and Observables with Angular 2|https://youtu.be/ZmEvKLYF0os |
 |RxMarbles<br/><sup>Interactive diagrams of Rx Observables</sup>|http://rxmarbles.com/ |
-|Angular 2 Architecture|https://angular.io/docs/ts/latest/guide/architecture.html |
+|RxJS docs | https://rxjs-dev.firebaseapp.com/api |
+|Angular 6 Cheatsheet | https://angular.io/guide/cheatsheet |
+|Angular API docs | https://angular.io/api |
 |Global Events in Angular 2|http://stackoverflow.com/questions/34700438/global-events-in-angular-2 |
+|Angular CLI wiki| https://github.com/angular/angular-cli/wiki|
 |Developing a Tabs Component in Angular 2|http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html |
 |The Ultimate Guide to Forms in Angular 2|http://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/ |
 |Custom Validators in Angular 2|http://blog.thoughtram.io/angular/2017/03/14/custom-validators-in-angular-2.html |
@@ -219,11 +226,7 @@ A 5-day crash course into front-end web development.
 |Karma|https://karma-runner.github.io/ |
 |Angular 2 Unit Testing recipes|https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.8x5d58123 |
 |Protractor|http://angular.github.io/protractor/ |
-| Getting started with Protractor and Angular CLI | https://coryrylan.com/blog/introduction-to-e2e-testing-with-the-angular-cli-and-protractor |
-|Angular 2 Go with Protractor|https://github.com/CarmenPopoviciu/angular2-go-protractor
- Gulp | http://gulpjs.com|
- Getting started with Gulp | https://www.tutorialspoint.com/gulp/index.htm
-
+|Getting started with Protractor and Angular CLI | https://coryrylan.com/blog/introduction-to-e2e-testing-with-the-angular-cli-and-protractor |
 
 
 ### Author
