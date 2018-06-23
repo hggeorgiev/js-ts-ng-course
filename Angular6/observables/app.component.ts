@@ -1,41 +1,50 @@
-import { Component, OnInit } from '@angular/core'
-import { fromEvent, merge } from "rxjs";
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { fromEvent, merge, Observable } from "rxjs/index";
 import { map, scan } from "rxjs/internal/operators";
-
 
 @Component({
   selector: 'app-root',
-  template: `
-    Counter: <span id="counter"></span><br/>
+  template: `    
+    Counter: <span #counter id="counter">{{ $totals | async}}</span><br/>
     <br/>
 
-    <button id="add" value="+1">+</button>
-    <button id="sub" value="-1">-</button>
-  `
+    <button #add id="add" value="+1">+</button>
+    <button #sub id="sub" value="-1">-</button>
+  `,
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  ngOnInit() {
-    let addBtn = document.getElementById('add');
-    let subBtn = document.getElementById('sub');
+export class AppComponent implements OnInit, AfterViewInit {
+  $totals: Observable<number>
+  @ViewChild('add') addBtn: ElementRef<HTMLButtonElement>;
+  @ViewChild('sub') subBtn: ElementRef<HTMLButtonElement>;
+  @ViewChild('counter') counter: ElementRef<HTMLSpanElement>;
 
-    let counter = document.getElementById('counter');
 
-    let increment$ = fromEvent(addBtn, 'click');
-    let decrement$ = fromEvent(subBtn, 'click');
-    let clicks$    = merge(increment$, decrement$).pipe(map((event: any) => parseInt(event.target.value)))
-    // function to use and seed value
-    let totals$    = clicks$.pipe(scan((total, value) => {
 
+  constructor() {
+
+
+  }
+
+  ngAfterViewInit() {
+    const increment$ = fromEvent(this.addBtn.nativeElement, 'click');
+    const decrement$ = fromEvent(this.subBtn.nativeElement, 'click');
+    const clicks$    = merge(increment$, decrement$).pipe(map((event) => parseInt(event.target.value, 10)
+    ));
+
+    this.$totals = clicks$.pipe(scan(
+      (total, value) => {
         console.log("The total is", total)
         console.log("The new value is", value);
-        return total + value
+        return total + value;
+      }, 0
+    ));
 
-      }, 0)
-    )
 
 
-    // totals$.subscribe((deviation: number)=> console.log(deviation) )
 
-    totals$.subscribe(total => counter.innerHTML = total.toString())
   }
+
+
+
 }
