@@ -5,6 +5,6 @@ class ContactsResolver implements Resolve<Contact[]> {
 
   resolve(route: ActivatedRouteSnapshot,
           state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
-    return this.contactService.getAll();
+    return this.contactService.getById(route.params['id']);
   }
 }
