@@ -37,13 +37,14 @@ TypeScript/phone-book/js/pracxs.js
 Angular6/play-ground/typings/
 Angular6/phone-book/typings/
 *.map
-Angular4-Testing/karma/src/typings/
+Angular6-Testing/karma/src/typings/
 Angular6/phone-book-http/typings/
 Angular6/phone-book-router/typings/
 
 Angular6/play-ground/\.idea/
+Angular6/play-ground/\.yarn.lock/
 
-Angular4-Testing/play-ground/dist/
+Angular6-Testing/play-ground/dist/
 
 JavaScript/async-load-2/\.idea/
 
@@ -69,7 +70,8 @@ Angular6/phone-book-router-modules-lazy/\.idea/
 
 Angular6/phone-book-router-modules/\.idea/
 
-Angular4-Testing/play-ground/\.idea/
+Angular6-Testing/play-ground/\.idea/
+Angular6-Testing/play-ground/\.yarn.lock/
 
 TypeScript/**/*.js
 

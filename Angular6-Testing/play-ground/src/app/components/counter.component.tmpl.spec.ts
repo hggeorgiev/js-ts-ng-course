@@ -24,7 +24,7 @@ describe('EventEmitter: Counter', () => {
     fixture.detectChanges()
 
     let elem = fixture.debugElement.query(By.css('h1'))
-    expect(elem.nativeElement.innerText).toBe('0')
+    expect(elem.nativeElement.textContent).toBe('0')
   })
 
   //specs
@@ -36,7 +36,7 @@ describe('EventEmitter: Counter', () => {
     fixture.detectChanges()
 
     let elem = fixture.debugElement.query(By.css('h1'))
-    expect(elem.nativeElement.innerText).toBe('1')
+    expect(elem.nativeElement.textContent).toBe('1')
   })
 
   it('should decrement -1', () => {
@@ -47,6 +47,6 @@ describe('EventEmitter: Counter', () => {
     fixture.detectChanges()
 
     let elem = fixture.debugElement.query(By.css('h1'))
-    expect(elem.nativeElement.innerText).toBe('-1')
+    expect(elem.nativeElement.textContent).toBe('-1')
   })  
 }) 

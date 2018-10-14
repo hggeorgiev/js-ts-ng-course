@@ -21,7 +21,6 @@ const responseData = [
 
 ]
 
-
 describe('MockBackend: LoadPersonsRealService', () => {
   let injector: TestBed;
   let service: LoadPersonsRealService
