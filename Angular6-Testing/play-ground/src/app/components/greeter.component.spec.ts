@@ -1,35 +1,29 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing'
-import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angular/platform-browser-dynamic/testing'
-import {GreeterComponent} from './greeter.component'
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { GreeterComponent } from './greeter.component'
 
-describe('GreeterComponent', () => {    
-    let fixture: ComponentFixture<GreeterComponent>
-    let comp: GreeterComponent
+describe('GreeterComponent', () => {
+  let fixture: ComponentFixture<GreeterComponent>
+  let component: GreeterComponent
 
-    beforeAll( () => { 
-        TestBed.resetTestEnvironment()
-        TestBed.initTestEnvironment( BrowserDynamicTestingModule, platformBrowserDynamicTesting() )
-    })
+  beforeEach(() => {
+    // refine the test module by declaring the test component
+    TestBed.configureTestingModule({
+      declarations: [ GreeterComponent ],
+    });
 
-    beforeEach(() => {
-        // refine the test module by declaring the test component
-        TestBed.configureTestingModule({
-            declarations: [ GreeterComponent ],
-        })
+    // create component and test fixture
+    fixture = TestBed.createComponent( GreeterComponent )
 
-        // create component and test fixture
-        fixture = TestBed.createComponent( GreeterComponent )
+    // get test component from the fixture
+    component = fixture.componentInstance
+  });
 
-        // get test component from the fixture
-        comp = fixture.componentInstance
-    })
 
-    it('must be "Phone Book App"', () => {
-        let element = fixture.nativeElement
+  it('title should be "Phone Book App"', () => {
+    const compiled = fixture.debugElement.nativeElement;
 
-        fixture.detectChanges()
+    fixture.detectChanges();
 
-        expect(element.querySelectorAll('h1').length).toBe(1);
-        expect(element.querySelector('h1').innerText).toBe('Phone Book App');
-    })
-})
+    expect(compiled.querySelector('h1').textContent).toContain('Phone Book App');
+  })
+});

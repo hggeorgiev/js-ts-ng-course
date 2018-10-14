@@ -59,6 +59,6 @@ describe('PersonsDetailsComponent (SPY)', () => {
         expect((<any>personServiceSpy.getAll).calls.count()).toBe(1)
 
         expect(element.querySelectorAll('li').length).toBe(2)
-        expect(element.querySelector('li').innerText).toBe('Max Smith')
+        expect(element.querySelector('li').textContent).toBe('Gordon Freeman')
     })
 })

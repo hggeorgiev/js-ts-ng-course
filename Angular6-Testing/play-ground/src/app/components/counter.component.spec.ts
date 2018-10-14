@@ -16,7 +16,6 @@ describe('EventEmitter: Counter', () => {
       })
 
       let fixture = TestBed.createComponent( Counter )
-
       this.counter = fixture.componentInstance
   })
   

@@ -31,11 +31,6 @@ describe('PersonsDetailsComponent (MOCK)', () => {
 
     let personServiceSpy = new PersonServiceMock()
 
-    beforeAll( () => {
-        TestBed.resetTestEnvironment()
-        TestBed.initTestEnvironment( BrowserDynamicTestingModule, platformBrowserDynamicTesting() )
-    })
-
     beforeEach(() => {
         spyOn(personServiceSpy, 'getAll').and.callThrough()
 
@@ -63,6 +58,6 @@ describe('PersonsDetailsComponent (MOCK)', () => {
         expect((<any>personServiceSpy.getAll).calls.count()).toBe(1)
 
         expect(element.querySelectorAll('li').length).toBe(2)
-        expect(element.querySelector('li').innerText).toBe('Max Smith')
+        expect(element.querySelector('li').textContent).toBe('Gordon Freeman')
     })
 })
