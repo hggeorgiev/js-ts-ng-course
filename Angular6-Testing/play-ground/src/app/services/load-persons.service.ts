@@ -4,31 +4,31 @@ import { Person } from "../person";
 
 let PERSONS: Person[] = [
   {
-    "id": "1",
+    "id": 1,
     "firstName": "Gordon",
     "lastName": "Freeman",
     "email": "freeman@blackmesa.com"
   },
   {
-    "id": "2",
+    "id": 2,
     "firstName": "Alyx",
     "lastName": "Vance",
     "email": "alyx@resitance.com"
   },
   {
-    "id": "3",
+    "id": 3,
     "firstName": "Wallace",
     "lastName": "Breen",
     "email": "breen@blackmesa.com"
   },
   {
-    "id": "4",
+    "id": 4,
     "firstName": "Barney",
     "lastName": "Calhoun",
     "email": "calhoun@blackmesa.com"
   },
   {
-    "id": "5",
+    "id": 5,
     "firstName": "Eli",
     "lastName": "Vance",
     "email": "vance@blackmesa.com"
