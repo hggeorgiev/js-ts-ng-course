@@ -9,12 +9,12 @@ describe('Details page', () => {
 
   beforeEach(() => {
     browser.get('#')
-  })
+  });
 
   it('should select Alyx VANCE', () => {
     homepage.selectContact(1)
     detailpage.validateSelectedUser('Alyx', 'Vance', 'alyx@resistance.com');
-  })
+  });
 
   it('should edit a contact', () => {
     homepage.selectContact(1);
