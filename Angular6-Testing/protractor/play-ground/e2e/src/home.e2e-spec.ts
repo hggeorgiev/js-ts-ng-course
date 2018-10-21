@@ -22,7 +22,7 @@ describe('Home page', () => {
         expect<any>(homepage.contactsList.count()).toEqual(5)
     })
 
-    it('should have Max SMITH in the list', () => {
-        expect<any>(homepage.contactsList.first().getText()).toEqual('Max SMITH')
+    it('should have Gordon FREEMAN in the list', () => {
+        expect<any>(homepage.contactsList.first().getText()).toEqual('Gordon FREEMAN')
     })
 });
