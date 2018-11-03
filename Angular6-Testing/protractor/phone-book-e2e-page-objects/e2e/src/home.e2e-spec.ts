@@ -1,5 +1,5 @@
 import { browser, element, by } from 'protractor'
-import {HomePageObject} from './pageObjects/home.pageObject'
+import {HomePageObject} from './page-objects/home.pageObject'
 
 describe('Home page', () => {
 
