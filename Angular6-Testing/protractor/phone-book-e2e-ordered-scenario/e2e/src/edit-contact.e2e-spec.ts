@@ -3,10 +3,6 @@ import { browser, by, element, protractor } from "protractor";
 describe('Editing a contact', () => {
   const list = element(by.tagName('contacts-list')).all(by.tagName('li'));
 
-  beforeAll(() => {
-    browser.get('#');
-  });
-
   it('Should select Alyx VANCE', () => {
     list.get(1).element(by.tagName('a')).click();
     const details = element(by.id('contactsDetailsContainer'));

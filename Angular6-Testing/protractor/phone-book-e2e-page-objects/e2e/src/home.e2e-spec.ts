@@ -9,20 +9,20 @@ describe('Home page', () => {
         browser.get('#');
     })
 
-    it('should have copyright', () => {
+    it('Should have copyright', () => {
         expect<any>(homepage.getCopyrightText()).toEqual('© Copyright ITCE 2018')
     })
 
-    it('should have add button', () => {
+    it('Should have add button', () => {
         expect(homepage.addButton).toBeDefined()
         expect(homepage.addButton).not.toBeNull()
     })
 
-    it('should have 5 contacts in the list', () => {
+    it('Should have 5 contacts in the list', () => {
         expect<any>(homepage.contactsList.count()).toEqual(5)
     })
 
-    it('should have Gordon FREEMAN in the list', () => {
+    it('Should have Gordon FREEMAN in the list', () => {
         expect<any>(homepage.contactsList.first().getText()).toEqual('Gordon FREEMAN')
     })
 });

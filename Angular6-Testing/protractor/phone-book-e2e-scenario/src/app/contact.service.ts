@@ -7,7 +7,7 @@ export class ContactsService {
 
   CONTACTS: Contact[] = [
     {id: ContactsService._contactId++, firstName: "Gordon", lastName: "Freeman", email: "freeman@blackmesa.com"},
-    {id: ContactsService._contactId++, firstName: "Alyx", lastName: "Vance", email: "alyx@resitance.com"},
+    {id: ContactsService._contactId++, firstName: "Alyx", lastName: "Vance", email: "alyx@resistance.com"},
     {id: ContactsService._contactId++, firstName: "Wallace", lastName: "Breen", email: "breen@blackmesa.com"},
     {id: ContactsService._contactId++, firstName: "Barney", lastName: "Calhoun", email: "calhoun@blackmesa.com"},
     {id: ContactsService._contactId++, firstName: "Eli", lastName: "Vance", email: "vance@blackmesa.com"}

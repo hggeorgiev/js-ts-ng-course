@@ -5,40 +5,39 @@ import { contactAdd, contactEdit } from "./mock-data/contacts";
 
 describe('Details page', () => {
 
-  let homepage   = new HomePageObject()
+  let homepage = new HomePageObject()
   let detailpage = new DetailsPageObject()
 
   beforeEach(() => {
     browser.get('#')
   });
 
-  it('should select Alyx VANCE', () => {
+  it('Should select Alyx VANCE', () => {
     homepage.selectContact(1)
     detailpage.validateSelectedUser('Alyx', 'Vance', 'alyx@resistance.com');
   });
 
-  it('should edit a contact', () => {
+  it('Should edit a contact', () => {
     homepage.selectContact(1);
     detailpage.selectEditButton();
     detailpage.clearForm();
-    detailpage.fillOutForm({firstName: contactEdit.firstName, lastName: contactEdit.lastName, email: contactEdit.email});
+    detailpage.fillOutForm({
+      firstName: contactEdit.firstName,
+      lastName: contactEdit.lastName,
+      email: contactEdit.email
+    });
 
     //Make the browser fall asleep for a second
-    browser.driver.sleep(1000);
     detailpage.submitForm();
-    browser.driver.sleep(1000);
   });
 
-  it('should add contact', () => {
+  it('Should add contact', () => {
     homepage.addButton.click();
     detailpage.fillOutForm({firstName: contactAdd.firstName, lastName: contactAdd.lastName, email: contactAdd.email});
-    browser.driver.sleep(1000);
+    detailpage.validateFormInput(contactAdd.firstName, contactAdd.lastName, contactAdd.email);
     detailpage.submitForm();
-    browser.driver.sleep(1000);
+    expect(detailpage.form.isPresent()).toBeFalsy();
     expect<any>(homepage.contactsList.count()).toEqual(6)
-
-
   })
-
 
 });
