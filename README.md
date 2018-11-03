@@ -169,33 +169,66 @@ A 5-day crash course into front-end web development.
 ### Demo Apps
 - Phone book app [phone-book](Angular6/phone-book)
 - HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular6/phone-book-http)
-- Router base phone book app [phone-book-router](Angular6/phone-book-router)
-- Router base phone book app with child router outlet [phone-book-router-children](Angular6/phone-book-router-children)
-- Router base phone book app that uses modules[phone-book-router-modules](Angular6/phone-book-router-modules)
-- Router base phone book app that uses lazy-loaded modules [phone-book-router-modules-lazy](Angular6/phone-book-router-modules-lazy)
-- Router base phone book app that uses a named outlet [phone-book-router-named-outlet](Angular6/phone-book-router-named-outlet)
+- Router-based phone book app [phone-book-router](Angular6/phone-book-router)
+- Router-based phone book app with child router outlet [phone-book-router-children](Angular6/phone-book-router-children)
+- Router-based phone book app that uses modules[phone-book-router-modules](Angular6/phone-book-router-modules)
+- Router-based phone book app that uses lazy-loaded modules [phone-book-router-modules-lazy](Angular6/phone-book-router-modules-lazy)
+- Router-based phone book app that uses a named outlet [phone-book-router-named-outlet](Angular6/phone-book-router-named-outlet)
 
 	
 ## Testing with Angular
 
+### Jest
 
+1. Jest configuration
+
+    Examples: [jest-config](Angular6-Testing/jest/jest-config)
+
+1. Pre-run setup
+
+    Examples: [lib-path](Angular6-Testing/jest/lib-path)
+    
 1. Dependency injection without mocking
 
-    Examples: [di-no-mock](Angular6-Testing/di-no-mock)
+    Examples: [di-no-mock](Angular6-Testing/jest/di-no-mock)
     
 1. Dependency injection with mocking
     
-    Examples: [di-with-mock](Angular6-Testing/di-with-mock)
+    Examples: [di-with-mock](Angular6-Testing/jest/di-with-mock)
 
 1. Different testing scenarios example
 
-    Examples: [test-pack](Angular6-Testing/test-pack)
+    Examples: [test-pack](Angular6-Testing/jest/test-pack)
 
-1. Protractor - End to end testing for Angular
+### Protractor
 
-    Examples: [protractor](Angular6-Testing/protractor)
+1. Protractor configuration
+
+    Examples: [protractor-config](Angular6-Testing/protractor/protractor-config)
+
+1. Simple test scenarios
+
+    Examples: [tests](Angular6-Testing/protractor/tests)
     
+1. Phone book E2E scenario
 
+    Examples: [phone-book-e2e-scenario](Angular6-Testing/protractor/phone-book-e2e-scenario)
+    
+1. Phone book E2E ordered scenario
+
+    Examples: [phone-book-e2e-ordered-scenario](Angular6-Testing/protractor/phone-book-e2e-ordered-scenario)
+    
+1. Phone book E2E scenario using page objects
+
+    Examples: [phone-book-e2e-page-objects](Angular6-Testing/protractor/phone-book-e2e-page-objects)
+    
+1. Utility methods
+
+    Examples: [utils](Angular6-Testing/protractor/utils)
+    
+1. Edge cases
+
+    Examples: [edge-cases](Angular6-Testing/protractor/edge-cases)
 
 ## Useful links
 |Ttile|Link|
@@ -217,7 +250,6 @@ A 5-day crash course into front-end web development.
 |Angular 6 Cheatsheet | https://angular.io/guide/cheatsheet |
 |Angular API docs | https://angular.io/api |
 |Global Events in Angular 2|http://stackoverflow.com/questions/34700438/global-events-in-angular-2 |
-|Angular CLI wiki| https://github.com/angular/angular-cli/wiki|
 |Developing a Tabs Component in Angular 2|http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html |
 |The Ultimate Guide to Forms in Angular 2|http://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/ |
 |Custom Validators in Angular 2|http://blog.thoughtram.io/angular/2017/03/14/custom-validators-in-angular-2.html |
@@ -226,9 +258,10 @@ A 5-day crash course into front-end web development.
 |Karma|https://karma-runner.github.io/ |
 |Angular 2 Unit Testing recipes|https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.8x5d58123 |
 |Protractor|http://angular.github.io/protractor/ |
+|Protractor helpers| https://github.com/wix/protractor-helpers |
 |Getting started with Protractor and Angular CLI | https://coryrylan.com/blog/introduction-to-e2e-testing-with-the-angular-cli-and-protractor |
-| Understanding the Angular CLI Workspace File| https://nitayneeman.com/posts/understanding-the-angular-cli-workspace-file/#schema
-| Angular CLI 6 under the hood — builders demystified | https://medium.com/dailyjs/angular-cli-6-under-the-hood-builders-demystified-f0690ebcf01
+|Understanding the Angular CLI Workspace File| https://nitayneeman.com/posts/understanding-the-angular-cli-workspace-file/#schema
+|Angular CLI 6 under the hood — builders demystified | https://medium.com/dailyjs/angular-cli-6-under-the-hood-builders-demystified-f0690ebcf01
 
 ### Author
 
