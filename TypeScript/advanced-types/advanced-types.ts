@@ -274,75 +274,14 @@ let sc = new ScientificCalculator(2)
 
 }
 
-// TypeName type
-type TypeName<T> =
-  T extends string ? "string" :
-  T extends number ? "number" :
-  T extends boolean ? "boolean" :
-  T extends undefined ? "undefined" :
-  T extends Function ? "function" :
-  "object";
+//- Unknown type --
 
-type T0 = TypeName<string>;  // "string"
-type T1 = TypeName<"a">;  // "string"
-type T2 = TypeName<true>;  // "boolean"
-type T3 = TypeName<() => void>;  // "function"
-type T4 = TypeName<string[]>;  // "object"
+let vAny : any = 10 ;
+let vUnknown: unknown = 10; // Works the same way as 'any' during assignment
 
-// Type not resolving tocondition
-interface Foo {
-  propA: boolean;
-  propB: boolean;
-}
 
-declare function f<T>(x: T): T extends Foo ? string : number;
+let s1: string = vAny; // Any is assignable to anything
+let s2: string = vUnknown; // Invalid - we can't assign vUnknown to any other type (without an explicit assertion)
 
-function foo<U>(x: U) {
-  // Has type 'U extends Foo ? string : number'
-  let a = f(x);
-
-  // This assignment is allowed though!
-  let b: string | number = a;
-}
-
-// Built-in conditional types
-
-// Exclude<T, U> – Exclude from T those types that are assignable to U.
-// Extract<T, U> – Extract from T those types that are assignable to U.
-// NonNullable<T> – Exclude null and undefined from T.
-// ReturnType<T> – Obtain the return type of a function type.
-// InstanceType<T> – Obtain the instance type of a constructor function type.
-
-type T00 = Exclude<"a" | "b" | "c" | "d", "a" | "c" | "f">;  // "b" | "d"
-type T01 = Extract<"a" | "b" | "c" | "d", "a" | "c" | "f">;  // "a" | "c"
-
-type T02 = Exclude<string | number | (() => void), Function>;  // string | number
-type T03 = Extract<string | number | (() => void), Function>;  // () => void
-
-type T04 = NonNullable<string | number | undefined>;  // string | number
-type T05 = NonNullable<(() => string) | string[] | null | undefined>;  // (() => string) | string[]
-
-function f1(s: string) {
-  return { a: 1, b: s };
-}
-
-class C {
-  x = 0;
-  y = 0;
-}
-
-type T10 = ReturnType<() => string>;  // string
-type T11 = ReturnType<(s: string) => void>;  // void
-type T12 = ReturnType<(<T>() => T)>;  // {}
-type T13 = ReturnType<(<T extends U, U extends number[]>() => T)>;  // number[]
-type T14 = ReturnType<typeof f1>;  // { a: number, b: string }
-type T15 = ReturnType<any>;  // any
-type T16 = ReturnType<never>;  // any
-type T17 = ReturnType<string>;  // Error
-type T18 = ReturnType<Function>;  // Error
-
-type T20 = InstanceType<typeof C>;  // C
-type T21 = InstanceType<any>;  // any
-type T22 = InstanceType<never>;  // any
-type T23 = InstanceType<string>;  // Error
-type T24 = InstanceType<Function>;  // Error
+vAny.mehtod(); // ok, using any
+vUnknown.mehtod(); // not ok, the variable is "unknown" to us
