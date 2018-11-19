@@ -136,27 +136,27 @@ A 5-day crash course into front-end web development.
 
 1. Hello world (with TypeScript)
 
-    Examples: [hello-world-ts](Angular6/hello-world-ts)
+    Examples: [hello-world-ts](Angular7/hello-world-ts)
     
 1. Attribute, class & style bindings
 
-    Examples: [user-inputs](Angular6/user-inputs), [emitter](Angular6/emitter)
+    Examples: [user-inputs](Angular7/user-inputs), [emitter](Angular7/emitter)
     
 1. Forms
 
-    Examples: [debounce](Angular6/debounce), [emitter](Angular6/emitter), [model vs template-driven](Angular6/forms)
+    Examples: [debounce](Angular7/debounce), [emitter](Angular7/emitter), [model vs template-driven](Angular7/forms)
 
 1. Pipes
     
-    Examples: [pipes](Angular6/pipes), [async-pipe](Angular6/async-pipe)
+    Examples: [pipes](Angular7/pipes), [async-pipe](Angular7/async-pipe)
 
 1. Custom Attribute Directive
 
-    Examples: [attribute-directive](Angular6/attribute-directive)
+    Examples: [attribute-directive](Angular7/attribute-directive)
     
 1. HTTP Client
 
-    Examples: [observables-vs-promises](Angular6/observables-vs-promises/index.html), [observables](Angular6/observables), [subject](Angular6/service-data)
+    Examples: [observables-vs-promises](Angular7/observables-vs-promises/index.html), [observables](Angular7/observables), [subject](Angular7/service-data)
     
 1. Resolving routes:
 
@@ -164,16 +164,16 @@ A 5-day crash course into front-end web development.
 
 1. Passing state through services:
 
-    Examples: [service-data](Angular6/service-data)
+    Examples: [service-data](Angular7/service-data)
 
 ### Demo Apps
-- Phone book app [phone-book](Angular6/phone-book)
-- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular6/phone-book-http)
-- Router base phone book app [phone-book-router](Angular6/phone-book-router)
-- Router base phone book app with child router outlet [phone-book-router-children](Angular6/phone-book-router-children)
-- Router base phone book app that uses modules[phone-book-router-modules](Angular6/phone-book-router-modules)
-- Router base phone book app that uses lazy-loaded modules [phone-book-router-modules-lazy](Angular6/phone-book-router-modules-lazy)
-- Router base phone book app that uses a named outlet [phone-book-router-named-outlet](Angular6/phone-book-router-named-outlet)
+- Phone book app [phone-book](Angular7/phone-book)
+- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular7/phone-book-http)
+- Router base phone book app [phone-book-router](Angular7/phone-book-router)
+- Router base phone book app with child router outlet [phone-book-router-children](Angular7/phone-book-router-children)
+- Router base phone book app that uses modules[phone-book-router-modules](Angular7/phone-book-router-modules)
+- Router base phone book app that uses lazy-loaded modules [phone-book-router-modules-lazy](Angular7/phone-book-router-modules-lazy)
+- Router base phone book app that uses a named outlet [phone-book-router-named-outlet](Angular7/phone-book-router-named-outlet)
 
 	
 ## Testing with Angular
@@ -181,19 +181,19 @@ A 5-day crash course into front-end web development.
 
 1. Dependency injection without mocking
 
-    Examples: [di-no-mock](Angular6-Testing/di-no-mock)
+    Examples: [di-no-mock](Angular7-Testing/di-no-mock)
     
 1. Dependency injection with mocking
     
-    Examples: [di-with-mock](Angular6-Testing/di-with-mock)
+    Examples: [di-with-mock](Angular7-Testing/di-with-mock)
 
 1. Different testing scenarios example
 
-    Examples: [test-pack](Angular6-Testing/test-pack)
+    Examples: [test-pack](Angular7-Testing/test-pack)
 
 1. Protractor - End to end testing for Angular
 
-    Examples: [protractor](Angular6-Testing/protractor)
+    Examples: [protractor](Angular7-Testing/protractor)
     
 
 
