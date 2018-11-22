@@ -93,7 +93,7 @@ export class ContactDetailsComponent implements OnChanges, OnInit {
     let dirtyContact: Contact = this.contactForm.value;
     dirtyContact.id           = this.contact.id;
 
-    if (this.contact.id === null)
+    if (this.contact.id)
       this._personService.add(dirtyContact);
     else
       this._personService.update(dirtyContact);
