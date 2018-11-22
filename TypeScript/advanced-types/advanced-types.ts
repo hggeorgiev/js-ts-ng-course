@@ -283,5 +283,5 @@ let vUnknown: unknown = 10; // Works the same way as 'any' during assignment
 let s1: string = vAny; // Any is assignable to anything
 let s2: string = vUnknown; // Invalid - we can't assign vUnknown to any other type (without an explicit assertion)
 
-vAny.mehtod(); // ok, using any
-vUnknown.mehtod(); // not ok, the variable is "unknown" to us
+vAny.someMethod(); // ok, using any
+vUnknown.someMethod(); // not ok, the variable is "unknown" to us
