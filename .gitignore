@@ -32,19 +32,19 @@ node_modules
 # Optional REPL history
 .node_repl_history
 TypeScript/greeter/greeter.js
-TypeScript/phone-book/js/pracxs.js.map
-TypeScript/phone-book/js/pracxs.js
-Angular7/play-ground/typings/
-Angular7/phone-book/typings/
+TypeScript/phone-book/app/pracxs.js.map
+TypeScript/phone-book/app/pracxs.js
+Angular8/play-ground/typings/
+Angular8/phone-book/typings/
 *.map
-Angular7-Testing/karma/src/typings/
-Angular7/phone-book-http/typings/
-Angular7/phone-book-router/typings/
+Angular8-Testing/karma/src/typings/
+Angular8/phone-book-http/typings/
+Angular8/phone-book-router/typings/
 
-Angular7/play-ground/\.idea/
-Angular7/play-ground/\.yarn.lock/
+Angular8/play-ground/\.idea/
+Angular8/play-ground/\.yarn.lock/
 
-Angular7-Testing/play-ground/dist/
+Angular8-Testing/play-ground/dist/
 
 JavaScript/async-load-2/\.idea/
 
@@ -52,26 +52,26 @@ JavaScript/phone-book/\.idea/
 
 TypeScript/phone-book-modules/\.idea/
 
-Angular7/play-ground/dist/
+Angular8/play-ground/dist/
 
-Angular7/hello-world/\.idea/
+Angular8/hello-world/\.idea/
 
-Angular7/emitter/\.idea/
+Angular8/emitter/\.idea/
 
-Angular7/phone-book-http/\.idea/
+Angular8/phone-book-http/\.idea/
 
-Angular7/phone-book-router/\.idea/
+Angular8/phone-book-router/\.idea/
 
-Angular7/phone-book-router-named-outlet/\.idea/
+Angular8/phone-book-router-named-outlet/\.idea/
 
-Angular7/phone-book-router-children/\.idea/
+Angular8/phone-book-router-children/\.idea/
 
-Angular7/phone-book-router-modules-lazy/\.idea/
+Angular8/phone-book-router-modules-lazy/\.idea/
 
-Angular7/phone-book-router-modules/\.idea/
+Angular8/phone-book-router-modules/\.idea/
 
-Angular7-Testing/play-ground/\.idea/
-Angular7-Testing/play-ground/\.yarn.lock/
+Angular8-Testing/play-ground/\.idea/
+Angular8-Testing/play-ground/\.yarn.lock/
 
 TypeScript/**/*.js
 
@@ -79,7 +79,7 @@ TypeScript/type-compatibility/\.idea/
 
 TypeScript/play-ground/\.idea/
 
-Angular7/hello-world-ts/\.idea/
+Angular8/hello-world-ts/\.idea/
 
 .idea/
 
