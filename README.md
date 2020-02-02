@@ -124,7 +124,9 @@ A 5-day crash course into front-end web development.
 1. Decorators
     
     Examples: [decorators](TypeScript/decorators/decorators.ts)
-
+    
+1. Utility types
+    Examples: [utility-types](TypeScript/utility-types/utility-types.ts)
 
 
 ### Demo Apps
