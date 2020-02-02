@@ -1,0 +1,19 @@
+{
+  "name": "Phonebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "concurrently \"tsc --watch\" \"http-server --port 4200\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "system": "^2.0.1",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "http-server": "^0.12.1"
+  }
+}

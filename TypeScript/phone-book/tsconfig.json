@@ -4,7 +4,7 @@
         "target": "es5",
         "noImplicitAny": false,
         "sourceMap": true,
-        "outFile": "js/pracxs.js"
+        "outFile": "app/pracxs.js"
     },
     "exclude": [
         "node_modules"

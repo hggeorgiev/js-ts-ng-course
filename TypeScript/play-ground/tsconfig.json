@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "system",
         // Switch to es6 -> Find is not available for es5
-        "target": "es5",
+        "target": "es6",
         "noImplicitAny": false,
         "sourceMap": true
     }
