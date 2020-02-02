@@ -1,0 +1,2 @@
+
+interface Document { editContactForm?: ContactEditFormElement }

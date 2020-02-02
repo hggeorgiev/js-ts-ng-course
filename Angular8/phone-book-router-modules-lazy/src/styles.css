@@ -1,0 +1,194 @@
+/* You can add global styles to this file, and also import other style files */
+/* ----------------------------------------------------
+
+Copyright (C) 2020  ITCE - All Rights Reserved
+You may use, distribute and modify this code under the
+terms of the Prometheus courses license.
+
+You should have received a copy of the Prometheus courses
+license.If not, please write to: info@itce.com
+or to prometheus@itce.com
+---------------------------------------------------- */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.pracxs-box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+}
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
+
+.text-small-caps {
+    font-variant: small-caps;
+}
+
+.text-info {
+    color: #6cb44a;
+}
+
+.text-danger {
+    color: #c40030;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.medium {
+    font-size: medium;
+}
+
+#content {
+    padding-bottom: 140px; /* fixed header + fixed footer */
+}
+
+#header .navbar-brand {
+    padding: 0;
+    padding-top: 12px;
+}
+
+#header .container {
+    padding: 0;
+}
+
+/*.pracxs-header {*/
+/*.navbar;*/
+/*.navbar-fixed-top;*/
+/*.box-shadow--4dp;*/
+/*}*/
+
+.header-links a {
+    color: #ecf0f1;
+}
+
+.header-links .text-muted {
+    color: #eccfcf;
+}
+
+.footer {
+    background: #fff;
+    height: 80px;
+    padding-top: 30px;
+}
+
+.footer-links a {
+    color: #777;
+}
+
+
+/*--- Theme ---*/
+
+a { cursor: pointer; }
+label[for] { cursor: pointer; }
+ul { padding-left: 0; }
+
+.navbar-default {
+    background: #c40030;
+    border-color: #9e0027;
+}
+.navbar-default .navbar-brand {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #ffffff;
+}
+.navbar-default .navbar-text {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #9e0027;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #9e0027;
+}
+.navbar-default .navbar-toggle {
+    border-color: #9e0027;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #9e0027;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background-color: #9e0027;
+    }
+}
+
+/*--- The App ---*/
+
+#content { margin-top: 30px; }
+.item { display: block; margin: 7px 0; padding-left: 7px; border-left: 3px solid transparent; cursor: pointer; }
+.item a { font-size: 120%; color: #333; text-decoration: none !important; }
+.item:hover { border-color: green; color: green; }
+.item:hover a { color: green; }
+.item.active { border-color: #c40030; color: #c40030; }
+.item.active a { color: #c40030; }
+
+.item a:focus { color: #c40030; }
+
+.item .remove { display: none; position: relative; top: 1px; margin-left: 7px; }
+.item:hover .remove { color: #777; display: inline-block; }
+.item:hover .remove:hover { color: #c40030; }
+
+#contactsDetailsContainer { margin-top: 30px;  font-size: 110%; padding: 15px 5px; border-top: 1px solid #c40030; }
+
+#contactsDetailsContainer input:not(.btn) { outline: none; border: 1px solid #777; padding: 2px 3px; border-radius: 3px; width: 300px; box-shadow: inset 1px 1px 3px 0px rgba(170,170,170,.6); }
+#contactsDetailsContainer input:focus { border-color: #c40030; }
+
+#contactsDetailsContainer label { color: #555; font-weight: normal; display: inline-block; width: 100px; padding: 3px 0; }
+
+#contactsDetailsContainer .btn { margin-right: 10px; }
+
+#add { margin-left: 10px; }
+
+a span.glyphicon { margin-right: 3px; }
+
+/* -- Angular forms -- */
+
+#contactsDetailsContainer input.ng-invalid:not(.ng-pristine) {
+    background: linear-gradient(to right, #c40030 , #c40030);
+    background-size: 6px 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    border-color: #c40030;
+}
