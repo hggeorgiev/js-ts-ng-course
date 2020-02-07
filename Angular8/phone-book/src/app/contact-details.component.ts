@@ -62,7 +62,7 @@ export class ContactDetailsComponent implements OnChanges {
     }
 
     ngOnChanges(changes) {
-        if(changes && changes.contact && changes.contact.currentValue!==changes.contact.previousValue)
+        if( changes.contact && changes.contact.currentValue!==changes.contact.previousValue)
             this.showEdit = ( this.contact && this.contact.id === null )
     }
 
