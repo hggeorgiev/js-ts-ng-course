@@ -34,17 +34,17 @@ node_modules
 TypeScript/greeter/greeter.js
 TypeScript/phone-book/app/pracxs.js.map
 TypeScript/phone-book/app/pracxs.js
-Angular8/play-ground/typings/
-Angular8/phone-book/typings/
+Angular9/play-ground/typings/
+Angular9/phone-book/typings/
 *.map
-Angular8-Testing/karma/src/typings/
-Angular8/phone-book-http/typings/
-Angular8/phone-book-router/typings/
+Angular9-Testing/karma/src/typings/
+Angular9/phone-book-http/typings/
+Angular9/phone-book-router/typings/
 
-Angular8/play-ground/\.idea/
-Angular8/play-ground/\.yarn.lock/
+Angular9/play-ground/\.idea/
+Angular9/play-ground/\.yarn.lock/
 
-Angular8-Testing/play-ground/dist/
+Angular9-Testing/play-ground/dist/
 
 JavaScript/async-load-2/\.idea/
 
@@ -52,26 +52,26 @@ JavaScript/phone-book/\.idea/
 
 TypeScript/phone-book-modules/\.idea/
 
-Angular8/play-ground/dist/
+Angular9/play-ground/dist/
 
-Angular8/hello-world/\.idea/
+Angular9/hello-world/\.idea/
 
-Angular8/emitter/\.idea/
+Angular9/emitter/\.idea/
 
-Angular8/phone-book-http/\.idea/
+Angular9/phone-book-http/\.idea/
 
-Angular8/phone-book-router/\.idea/
+Angular9/phone-book-router/\.idea/
 
-Angular8/phone-book-router-named-outlet/\.idea/
+Angular9/phone-book-router-named-outlet/\.idea/
 
-Angular8/phone-book-router-children/\.idea/
+Angular9/phone-book-router-children/\.idea/
 
-Angular8/phone-book-router-modules-lazy/\.idea/
+Angular9/phone-book-router-modules-lazy/\.idea/
 
-Angular8/phone-book-router-modules/\.idea/
+Angular9/phone-book-router-modules/\.idea/
 
-Angular8-Testing/play-ground/\.idea/
-Angular8-Testing/play-ground/\.yarn.lock/
+Angular9-Testing/play-ground/\.idea/
+Angular9-Testing/play-ground/\.yarn.lock/
 
 TypeScript/**/*.js
 
@@ -79,7 +79,7 @@ TypeScript/type-compatibility/\.idea/
 
 TypeScript/play-ground/\.idea/
 
-Angular8/hello-world-ts/\.idea/
+Angular9/hello-world-ts/\.idea/
 
 .idea/
 

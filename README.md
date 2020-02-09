@@ -139,23 +139,23 @@ A 5-day crash course into front-end web development.
     
 1. Attribute, class & style bindings
 
-    Examples: [user-inputs](Angular8/user-inputs), [emitter](Angular8/emitter)
+    Examples: [user-inputs](Angular9/user-inputs), [emitter](Angular9/emitter)
     
 1. Forms
 
-    Examples: [debounce](Angular8/debounce), [emitter](Angular8/emitter), [model vs template-driven](Angular8/forms)
+    Examples: [debounce](Angular9/debounce), [emitter](Angular9/emitter), [model vs template-driven](Angular9/forms)
 
 1. Pipes
     
-    Examples: [pipes](Angular8/pipes), [async-pipe](Angular8/async-pipe)
+    Examples: [pipes](Angular9/pipes), [async-pipe](Angular9/async-pipe)
 
 1. Custom Attribute Directive
 
-    Examples: [attribute-directive](Angular8/attribute-directive)
+    Examples: [attribute-directive](Angular9/attribute-directive)
     
 1. HTTP Client
 
-    Examples: [observables-vs-promises](Angular8/observables-vs-promises/index.html), [observables](Angular8/observables), [subject](Angular8/service-data)
+    Examples: [observables-vs-promises](Angular9/observables-vs-promises/index.html), [observables](Angular9/observables), [subject](Angular9/service-data)
     
 1. Resolving routes:
 
@@ -163,16 +163,16 @@ A 5-day crash course into front-end web development.
 
 1. Passing state through services:
 
-    Examples: [service-data](Angular8/service-data)
+    Examples: [service-data](Angular9/service-data)
 
 ### Demo Apps
-- Phone book app [phone-book](Angular8/phone-book)
-- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular8/phone-book-http)
-- Router base phone book app [phone-book-router](Angular8/phone-book-router)
-- Router base phone book app with child router outlet [phone-book-router-children](Angular8/phone-book-router-children)
-- Router base phone book app that uses modules[phone-book-router-modules](Angular8/phone-book-router-modules)
-- Router base phone book app that uses lazy-loaded modules [phone-book-router-modules-lazy](Angular8/phone-book-router-modules-lazy)
-- Router base phone book app that uses a named outlet [phone-book-router-named-outlet](Angular8/phone-book-router-named-outlet)
+- Phone book app [phone-book](Angular9/phone-book)
+- HTTP base phone book app that retrieves contacts list from the server [phone-book-http](Angular9/phone-book-http)
+- Router base phone book app [phone-book-router](Angular9/phone-book-router)
+- Router base phone book app with child router outlet [phone-book-router-children](Angular9/phone-book-router-children)
+- Router base phone book app that uses modules[phone-book-router-modules](Angular9/phone-book-router-modules)
+- Router base phone book app that uses lazy-loaded modules [phone-book-router-modules-lazy](Angular9/phone-book-router-modules-lazy)
+- Router base phone book app that uses a named outlet [phone-book-router-named-outlet](Angular9/phone-book-router-named-outlet)
 
 	
 ## Testing with Angular
@@ -180,19 +180,19 @@ A 5-day crash course into front-end web development.
 
 1. Dependency injection without mocking
 
-    Examples: [di-no-mock](Angular8-Testing/di-no-mock)
+    Examples: [di-no-mock](Angular9-Testing/di-no-mock)
     
 1. Dependency injection with mocking
     
-    Examples: [di-with-mock](Angular8-Testing/di-with-mock)
+    Examples: [di-with-mock](Angular9-Testing/di-with-mock)
 
 1. Different testing scenarios example
 
-    Examples: [test-pack](Angular8-Testing/test-pack)
+    Examples: [test-pack](Angular9-Testing/test-pack)
 
 1. Protractor - End to end testing for Angular
 
-    Examples: [protractor](Angular8-Testing/protractor)
+    Examples: [protractor](Angular9-Testing/protractor)
     
 
 
