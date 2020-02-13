@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   time: Observable<Date>;
 
   ngOnInit() {
-    this.time = Observable.create( (observer) => {
+    this.time = new Observable<Date>()( (observer) => {
       setInterval( () => {
         observer.next(new Date())
         console.log('tick')

@@ -45,7 +45,7 @@ class ContactsController {
 		contactsDetailsContainer.innerHTML = 
 			'<label>First Name: </label><b>' + contact.firstName + '</b><br/>' +
 			'<label>Last Name: </label><b>' + contact.lastName + '</b><br/>' +
-			'<label>email: </label><b>' + contact.email + '</b><br/>' +
+			'<label>Email: </label><b>' + contact.email + '</b><br/>' +
 			'<label></label><a href="#" class="text-danger" onclick="ctrl.edit(event,' + contact.id + ')"><span class="glyphicon glyphicon-edit"></span>Edit</a><br/>';
 	}
 	

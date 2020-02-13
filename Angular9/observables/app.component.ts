@@ -19,11 +19,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('sub') subBtn: ElementRef<HTMLButtonElement>;
   @ViewChild('counter') counter: ElementRef<HTMLSpanElement>;
 
-
-
   constructor() {
-
-
   }
 
   ngAfterViewInit() {
